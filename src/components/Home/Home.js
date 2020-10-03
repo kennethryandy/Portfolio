@@ -1,12 +1,13 @@
 import React, { useState } from "react";
 import Typed from "react-typed";
+import VisibilitySensor from "react-visibility-sensor";
 //material-ui
 import homeStyles from "./homeStyles";
 import { IconButton, Typography } from "@material-ui/core";
 import ToggleOffIcon from "@material-ui/icons/ToggleOffOutlined";
 import ToggleOnIcon from "@material-ui/icons/ToggleOnOutlined";
 
-function Home() {
+function Home({ nav }) {
   const classes = homeStyles();
   const [toggled, setToggle] = useState(false);
   return (
@@ -35,25 +36,29 @@ function Home() {
           />
         </Typography>
       </div>
-      <div className={classes.iconContainer}>
-        <IconButton
-          id="icon"
-          href="#projects"
-          className={classes.iconButton}
-          onClick={() => {
-            setToggle(!toggled);
-            setTimeout(() => {
-              setToggle(false);
-            }, 500);
-          }}
-        >
-          {!toggled ? (
-            <ToggleOffIcon className={classes.toggleIcon} color="primary" />
-          ) : (
-            <ToggleOnIcon className={classes.toggleIcon} color="primary" />
-          )}
-        </IconButton>
-      </div>
+      <VisibilitySensor onChange={(vis) => nav(vis)}>
+        <div className={classes.iconContainer}>
+          <IconButton
+            id="icon"
+            href="#projects"
+            className={classes.iconButton}
+            onClick={() => {
+              setToggle(!toggled);
+              if (!toggled) {
+                setTimeout(() => {
+                  setToggle(false);
+                }, 500);
+              }
+            }}
+          >
+            {!toggled ? (
+              <ToggleOffIcon className={classes.toggleIcon} color="primary" />
+            ) : (
+              <ToggleOnIcon className={classes.toggleIcon} color="primary" />
+            )}
+          </IconButton>
+        </div>
+      </VisibilitySensor>
     </div>
   );
 }

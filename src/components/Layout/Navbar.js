@@ -3,10 +3,15 @@ import React from "react";
 import navbarStyles from "./navbarStyles";
 import { AppBar, Link, Toolbar, Typography } from "@material-ui/core";
 
-function Navbar() {
+function Navbar({ navBar }) {
   const classes = navbarStyles();
   return (
-    <AppBar color="transparent" position="fixed" className={classes.navbar}>
+    <AppBar
+      color={navBar ? "transparent" : "secondary"}
+      position="fixed"
+      className={classes.navbar}
+      // style={navBar ? { boxShadow: "none" } : {}}
+    >
       <Toolbar>
         <div className={classes.nav}>
           <Link href="#home" underline="none" color="inherit">
@@ -24,20 +29,20 @@ function Navbar() {
               home
             </Link>
             <Link
-              href="#projects"
-              underline="none"
-              color="inherit"
-              className={classes.navlink}
-            >
-              projects
-            </Link>
-            <Link
               href="#about"
               underline="none"
               color="inherit"
               className={classes.navlink}
             >
               about
+            </Link>
+            <Link
+              href="#projects"
+              underline="none"
+              color="inherit"
+              className={classes.navlink}
+            >
+              projects
             </Link>
             <Link
               href="#contact"

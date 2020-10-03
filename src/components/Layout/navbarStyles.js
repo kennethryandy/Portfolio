@@ -1,11 +1,15 @@
 import { makeStyles } from "@material-ui/core/styles";
 
 export default makeStyles((theme) => ({
+  navbar: {
+    transition: `background-color 200ms ${theme.transitions.easing.easeInOut}`,
+  },
   nav: {
-    width: "100%",
+    width: "90%",
     display: "flex",
     alignItems: "center",
     justifyContent: "space-between",
+    margin: "auto",
   },
   title: {
     [theme.breakpoints.between("md", "lg")]: { fontSize: "1.5rem " },

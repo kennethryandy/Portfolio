@@ -1,14 +1,6 @@
 import React from "react";
 //material-ui
-import {
-  Grid,
-  Typography,
-  Paper,
-  List,
-  ListItem,
-  ListItemText,
-  ListItemIcon,
-} from "@material-ui/core";
+import { Grid, Typography, Paper, Divider } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 
 const useStyles = makeStyles((theme) => ({
@@ -21,12 +13,16 @@ const useStyles = makeStyles((theme) => ({
     },
     "& .MuiPaper-root": { color: "black" },
   },
-  lists: {
-    textAlignLast: "center",
+  title: {
+    textAlign: "center",
+  },
+  skills: {
+    margin: theme.spacing(2),
   },
   paper: {
+    padding: 1,
     textAlign: "center",
-    minWidth: 250,
+    margin: theme.spacing(2),
   },
 }));
 
@@ -34,26 +30,88 @@ function Card() {
   const classes = useStyles();
   return (
     <Grid container className={classes.container}>
+      <Grid md={4} sm={6} item className={classes.item}>
+        <Paper className={classes.paper}>
+          <i className="fas fa-laptop-code" />
+          <Typography className={classes.title} variant="h6">
+            Front-end
+          </Typography>
+          <Divider variant="middle" />
+          <Typography className={classes.skills} variant="body1">
+            HTML5, CSS/SASS/JSS, Javascript, Jquery, Ajax
+          </Typography>
+          <Typography className={classes.title} variant="subtitle2">
+            Frameworks
+          </Typography>
+          <Typography className={classes.skills} variant="body1">
+            REACT, VUE
+          </Typography>
+        </Paper>
+      </Grid>
+      <Grid md={4} sm={6} item className={classes.item}>
+        <Paper className={classes.paper}>
+          <i className="fas fa-database" />
+          <Typography className={classes.title} variant="h6">
+            Back-end
+          </Typography>
+          <Divider variant="middle" />
+          <Typography className={classes.skills} variant="body1">
+            PHP, NodeJs, Express, Graphql, REST, Python, Java
+          </Typography>
+          <Typography className={classes.title} variant="subtitle2">
+            Database
+          </Typography>
+          <Typography className={classes.skills} variant="body1">
+            MongoDB, Firebase, SQL
+          </Typography>
+        </Paper>
+      </Grid>
+      <Grid md={4} sm={12} item className={classes.item}>
+        <Paper className={classes.paper}>
+          <i className="fas fa-cogs" />
+          <Typography className={classes.title} variant="h6">
+            Others
+          </Typography>
+          <Divider variant="middle" />
+          <Typography className={classes.skills} variant="body1">
+            Git/Github, CLI, VS Code,
+          </Typography>
+          <Typography className={classes.title} variant="subtitle2">
+            Design
+          </Typography>
+          <Typography className={classes.skills} variant="body1">
+            Adobe Photoshop, Adobe Illustrator, COREL Draw,
+          </Typography>
+        </Paper>
+      </Grid>
+    </Grid>
+  );
+}
+
+export default Card;
+
+{
+  /* <Grid container className={classes.container}>
       <Grid item className={classes.item}>
         <Paper className={classes.paper}>
-          <i class="fas fa-laptop-code" />
+          <i className="fas fa-laptop-code" />
           <Typography variant="h6">Front-end</Typography>
           <List className={classes.lists}>
             <ListItem>
               <ListItemIcon>
-                <i class="fab fa-html5"></i>
+                <i className="fab fa-html5"></i>
               </ListItemIcon>
               <ListItemText primary="HTML5" />
             </ListItem>
             <ListItem>
               <ListItemIcon>
-                <i class="fab fa-css3"></i>
+                <i className="fab fa-css3"></i>
               </ListItemIcon>
               <ListItemText primary="CSS3/SASS/JSS" />
             </ListItem>
             <ListItem>
               <ListItemIcon>
-                <i class="fab fa-js-square"></i>
+                <i className="fab fa-js-square"></i>
               </ListItemIcon>
               <ListItemText primary="Javascript" />
             </ListItem>
@@ -62,13 +120,13 @@ function Card() {
             </ListItem>
             <ListItem>
               <ListItemIcon>
-                <i class="fab fa-react" />
+                <i className="fab fa-react" />
               </ListItemIcon>
               <ListItemText primary="REACT" />
             </ListItem>
             <ListItem>
               <ListItemIcon>
-                <i class="fab fa-vuejs"></i>
+                <i className="fab fa-vuejs"></i>
               </ListItemIcon>
               <ListItemText primary="VUE" />
             </ListItem>
@@ -77,36 +135,36 @@ function Card() {
       </Grid>
       <Grid item className={classes.item}>
         <Paper className={classes.paper}>
-          <i class="fas fa-database" />
+          <i className="fas fa-database" />
           <Typography variant="h6">Back-end</Typography>
           <List className={classes.lists}>
             <ListItem>
               <ListItemIcon>
-                <i class="fab fa-php"></i>
+                <i className="fab fa-php"></i>
               </ListItemIcon>
               <ListItemText primary="PHP" />
             </ListItem>
             <ListItem>
               <ListItemIcon>
-                <i class="fab fa-node"></i>
+                <i className="fab fa-node"></i>
               </ListItemIcon>
               <ListItemText primary="Node Js" />
             </ListItem>
             <ListItem>
               <ListItemIcon>
-                <i class="fab fa-java"></i>
+                <i className="fab fa-java"></i>
               </ListItemIcon>
               <ListItemText primary="Java" />
             </ListItem>
             <ListItem>
               <ListItemIcon>
-                <i class="fab fa-python"></i>
+                <i className="fab fa-python"></i>
               </ListItemIcon>
               <ListItemText primary="Python" />
             </ListItem>
             <ListItem>
               <ListItemIcon>
-                <i class="fab fa-node-js"></i>
+                <i className="fab fa-node-js"></i>
               </ListItemIcon>
               <ListItemText primary="Express Js" />
             </ListItem>
@@ -125,9 +183,9 @@ function Card() {
           </List>
         </Paper>
       </Grid>
-      <Grid ite className={classes.item}>
+      <Grid item className={classes.item}>
         <Paper className={classes.paper}>
-          <i class="fas fa-cogs" />
+          <i className="fas fa-cogs" />
           <Typography variant="h6">Others</Typography>
           <List className={classes.lists}>
             <ListItem>
@@ -154,8 +212,5 @@ function Card() {
           </List>
         </Paper>
       </Grid>
-    </Grid>
-  );
+    </Grid> */
 }
-
-export default Card;
