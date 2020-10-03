@@ -75,7 +75,7 @@ function Card() {
           </Typography>
         </Paper>
       </Grid>
-      <Grid className={classes.hr} md={4} sm={12} item className={classes.item}>
+      <Grid md={4} sm={12} item className={classes.item}>
         <Paper className={classes.paper}>
           <i className="fas fa-cogs" />
           <Typography className={classes.title} variant="h6">
