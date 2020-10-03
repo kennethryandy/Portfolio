@@ -99,8 +99,7 @@ function Card() {
 
 export default Card;
 
-{
-  /* <Grid container className={classes.container}>
+/* <Grid container className={classes.container}>
       <Grid item className={classes.item}>
         <Paper className={classes.paper}>
           <i className="fas fa-laptop-code" />
@@ -222,4 +221,3 @@ export default Card;
         </Paper>
       </Grid>
     </Grid> */
-}
