@@ -13,7 +13,8 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     justifyContent: "space-between",
     alignItems: "center",
-    [theme.breakpoints.down("xs")]: { justifyContent: "center" },
+    [theme.breakpoints.only("xs")]: { justifyContent: "center" },
+    [theme.breakpoints.only("sm")]: { justifyContent: "space-around" },
   },
   footerNavLink: {
     textDecoration: "none",
@@ -29,13 +30,16 @@ const useStyles = makeStyles((theme) => ({
   email: {
     textDecoration: "underline",
   },
+  col: {
+    [theme.breakpoints.down("sm")]: { margin: `${theme.spacing(1)}px 0` },
+  },
 }));
 
 function Footer() {
   const classes = useStyles();
   return (
     <Grid container className={classes.footer}>
-      <Grid item>
+      <Grid className={classes.col} item>
         <Link className={classes.footerNavLink} href="#about">
           <Typography gutterBottom display="inline" variant="subtitle2">
             About
@@ -47,7 +51,7 @@ function Footer() {
           </Typography>
         </Link>
       </Grid>
-      <Grid item>
+      <Grid className={classes.col} item>
         <span>Email: </span>
         <Typography
           display="inline"
@@ -57,7 +61,7 @@ function Footer() {
           dykennethryan@gmail.com
         </Typography>
       </Grid>
-      <Grid item style={{ display: "flex" }}>
+      <Grid className={classes.col} item style={{ display: "flex" }}>
         <div className={classes.socialmedia}>
           <GitHubIcon />
           <Typography variant="subtitle2">Github</Typography>

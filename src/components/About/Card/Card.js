@@ -23,6 +23,15 @@ const useStyles = makeStyles((theme) => ({
     padding: 1,
     textAlign: "center",
     margin: theme.spacing(2),
+    minHeight: 260,
+    minWidth: 320,
+    display: "flex",
+    flexDirection: "column",
+  },
+  hr: {
+    backgroundColor: "rebeccapurple",
+    width: "40%",
+    alignSelf: "center",
   },
 }));
 
@@ -36,7 +45,7 @@ function Card() {
           <Typography className={classes.title} variant="h6">
             Front-end
           </Typography>
-          <Divider variant="middle" />
+          <Divider className={classes.hr} variant="middle" />
           <Typography className={classes.skills} variant="body1">
             HTML5, CSS/SASS/JSS, Javascript, Jquery, Ajax
           </Typography>
@@ -54,7 +63,7 @@ function Card() {
           <Typography className={classes.title} variant="h6">
             Back-end
           </Typography>
-          <Divider variant="middle" />
+          <Divider className={classes.hr} variant="middle" />
           <Typography className={classes.skills} variant="body1">
             PHP, NodeJs, Express, Graphql, REST, Python, Java
           </Typography>
@@ -66,13 +75,13 @@ function Card() {
           </Typography>
         </Paper>
       </Grid>
-      <Grid md={4} sm={12} item className={classes.item}>
+      <Grid className={classes.hr} md={4} sm={12} item className={classes.item}>
         <Paper className={classes.paper}>
           <i className="fas fa-cogs" />
           <Typography className={classes.title} variant="h6">
             Others
           </Typography>
-          <Divider variant="middle" />
+          <Divider className={classes.hr} variant="middle" />
           <Typography className={classes.skills} variant="body1">
             Git/Github, CLI, VS Code,
           </Typography>
