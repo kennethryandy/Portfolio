@@ -6,6 +6,7 @@ import { makeStyles } from "@material-ui/core/styles";
 const useStyles = makeStyles((theme) => ({
   container: {
     justifyContent: "space-evenly",
+    marginTop: theme.spacing(2),
   },
   item: {
     "& i": {
@@ -29,7 +30,7 @@ const useStyles = makeStyles((theme) => ({
     flexDirection: "column",
   },
   hr: {
-    backgroundColor: "rebeccapurple",
+    backgroundColor: "#14213d",
     width: "40%",
     alignSelf: "center",
   },
@@ -53,7 +54,7 @@ function Card() {
             Frameworks
           </Typography>
           <Typography className={classes.skills} variant="body1">
-            REACT, VUE
+            REACT, REDUX, VUE
           </Typography>
         </Paper>
       </Grid>

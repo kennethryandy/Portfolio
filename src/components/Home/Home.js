@@ -11,7 +11,7 @@ function Home({ nav }) {
   const classes = homeStyles();
   const [toggled, setToggle] = useState(false);
   return (
-    <div className={classes.home} id="home">
+    <section className={classes.home} id="home">
       <Typography className={classes.name} variant="h1">
         Hey! I'm Kenneth.
       </Typography>
@@ -59,7 +59,7 @@ function Home({ nav }) {
           </IconButton>
         </div>
       </VisibilitySensor>
-    </div>
+    </section>
   );
 }
 

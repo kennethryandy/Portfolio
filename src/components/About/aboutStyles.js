@@ -9,12 +9,25 @@ export default makeStyles((theme) => ({
     alignItems: "center",
     color: "black",
     margin: "auto",
+    width: "90%",
+  },
+  hr: {
+    width: "15%",
+    backgroundColor: "#14213d",
+    marginBottom: theme.spacing(2),
   },
   info: {
     [theme.breakpoints.between("md", "lg")]: { width: "75%" },
     [theme.breakpoints.between("xs", "sm")]: { width: "85%" },
     width: "70%",
-    "& h4": { textAlign: "center" },
-    "& p": { textAlign: "justify" },
+    "& h4": { textAlign: "center", margin: theme.spacing(1) },
+    "& p": { textAlign: "justify", fontSize: "1.2rem" },
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center",
+  },
+  skills: {
+    marginTop: theme.spacing(3),
+    textAlign: "center",
   },
 }));

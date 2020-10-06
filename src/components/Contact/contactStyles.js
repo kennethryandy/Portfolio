@@ -3,7 +3,7 @@ import { makeStyles } from "@material-ui/core/styles";
 export default makeStyles((theme) => ({
   appBarSpacer: theme.mixins.toolbar,
   contact: {
-    backgroundColor: "#040411",
+    backgroundColor: "#14213d",
     height: "90vh",
   },
   title: {
