@@ -10,12 +10,12 @@ import Project from "./components/Project/Project";
 const theme = createMuiTheme({
   type: "dark",
   palette: {
-    primary: {
-      light: "#434d63",
-      main: "#14213d",
-      dark: "#0e172a",
-      contrastText: "#ffffff",
-    },
+    // primary: {
+    //   light: "#434d63",
+    //   main: "#14213d",
+    //   dark: "#0e172a",
+    //   contrastText: "#ffffff",
+    // },
     secondary: {
       light: "#ffffff",
       main: "#ffffff",

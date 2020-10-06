@@ -55,7 +55,7 @@ export default makeStyles((theme) => ({
   },
   iconContainer: {
     width: "100%",
-    textAlignLast: "center",
+    textAlign: "-webkit-center",
     position: "absolute",
     bottom: 0,
     margin: "50px 0",
@@ -65,6 +65,7 @@ export default makeStyles((theme) => ({
     fontSize: "2.6rem !important",
     transform: "rotate(90deg)",
     zIndex: 3,
+    color: "#4dabf5",
   },
   iconButton: {
     "-webkit-animation": "$bounce 3s infinite",

@@ -11,11 +11,6 @@ export default makeStyles((theme) => ({
     margin: "auto",
     width: "90%",
   },
-  hr: {
-    width: "15%",
-    backgroundColor: "#14213d",
-    marginBottom: theme.spacing(2),
-  },
   info: {
     [theme.breakpoints.between("md", "lg")]: { width: "75%" },
     [theme.breakpoints.between("xs", "sm")]: { width: "85%" },

@@ -25,14 +25,18 @@ const useStyles = makeStyles((theme) => ({
     textAlign: "center",
     margin: theme.spacing(2),
     minHeight: 260,
-    minWidth: 320,
     display: "flex",
     flexDirection: "column",
+    "& i": {
+      margin: `${theme.spacing(2)}px auto`,
+      color: "#14213d",
+    },
   },
   hr: {
     backgroundColor: "#14213d",
     width: "40%",
     alignSelf: "center",
+    marginBottom: theme.spacing(1),
   },
 }));
 
@@ -40,7 +44,7 @@ function Card() {
   const classes = useStyles();
   return (
     <Grid container className={classes.container}>
-      <Grid md={4} sm={6} item className={classes.item}>
+      <Grid md={4} sm={6} xs={6} item className={classes.item}>
         <Paper className={classes.paper}>
           <i className="fas fa-laptop-code" />
           <Typography className={classes.title} variant="h6">
@@ -58,7 +62,7 @@ function Card() {
           </Typography>
         </Paper>
       </Grid>
-      <Grid md={4} sm={6} item className={classes.item}>
+      <Grid md={4} sm={6} xs={6} item className={classes.item}>
         <Paper className={classes.paper}>
           <i className="fas fa-database" />
           <Typography className={classes.title} variant="h6">
@@ -76,7 +80,7 @@ function Card() {
           </Typography>
         </Paper>
       </Grid>
-      <Grid md={4} sm={12} item className={classes.item}>
+      <Grid md={4} sm={12} xs={12} item className={classes.item}>
         <Paper className={classes.paper}>
           <i className="fas fa-cogs" />
           <Typography className={classes.title} variant="h6">
@@ -84,7 +88,7 @@ function Card() {
           </Typography>
           <Divider className={classes.hr} variant="middle" />
           <Typography className={classes.skills} variant="body1">
-            Git/Github, CLI, VS Code,
+            NPM, PIP, Git/Github, CLI, VS Code,
           </Typography>
           <Typography className={classes.title} variant="subtitle2">
             Design

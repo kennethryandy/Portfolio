@@ -52,9 +52,9 @@ function Home({ nav }) {
             }}
           >
             {!toggled ? (
-              <ToggleOffIcon className={classes.toggleIcon} color="primary" />
+              <ToggleOffIcon className={classes.toggleIcon} />
             ) : (
-              <ToggleOnIcon className={classes.toggleIcon} color="primary" />
+              <ToggleOnIcon className={classes.toggleIcon} />
             )}
           </IconButton>
         </div>

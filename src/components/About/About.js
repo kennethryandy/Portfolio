@@ -1,7 +1,7 @@
 import React from "react";
 //material-ui
 import aboutStyles from "./aboutStyles";
-import { Typography, Divider } from "@material-ui/core";
+import { Typography } from "@material-ui/core";
 import Card from "./Card/Card";
 
 function About() {
@@ -10,8 +10,9 @@ function About() {
     <section className={classes.about} id="about">
       <div className={classes.appBarSpacer} />
       <div className={classes.info}>
-        <Typography variant="h4">About Me</Typography>
-        <Divider className={classes.hr} color="primary" />
+        <Typography variant="h4" gutterBottom>
+          About Me
+        </Typography>
         <Typography gutterBottom variant="body1" className={classes.aboutMe}>
           "Hello, my name is Kenneth Ryan Dy a web developer. As I enjoy
           exploring new things I never back down from any challenges that comes.

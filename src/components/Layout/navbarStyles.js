@@ -17,9 +17,9 @@ export default makeStyles((theme) => ({
   },
   navlink: {
     "&:hover": {
-      color: "gray",
+      color: "#4dabf5",
     },
-    transition: `200ms all ${theme.transitions.easing.easeInOut}`,
+    transition: `200ms color ${theme.transitions.easing.easeInOut}`,
     margin: "0 15px ",
     textDecoration: "none ",
     [theme.breakpoints.between("sm", "lg")]: { fontSize: "1rem" },
@@ -28,9 +28,9 @@ export default makeStyles((theme) => ({
   },
   navlinkScondary: {
     "&:hover": {
-      color: "gray",
+      color: "#4dabf5",
     },
-    transition: `200ms all ${theme.transitions.easing.easeInOut}`,
+    transition: `200ms color ${theme.transitions.easing.easeInOut}`,
     margin: "0 15px ",
     textDecoration: "none ",
     [theme.breakpoints.up("sm")]: { display: "none" },
