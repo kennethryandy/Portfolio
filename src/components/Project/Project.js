@@ -13,7 +13,6 @@ function Project() {
   const classes = projectStyles();
   const [isHover, setIsHover] = useState(false);
 
-  console.log(isHover);
   return (
     <section className={classes.project} id="projects">
       <div className={classes.appBarSpacer} />
@@ -201,19 +200,27 @@ function Project() {
               color="primary"
               variant="contained"
               className={classes.demo}
-              href="#"
+              href="https://quiz-clone.netlify.app"
               target="_blank"
               rel="noopener noreferrer"
             >
               Live Demo
             </Button>
-            <Link href="#" className={classes.code} rel="noopener noreferrer">
+            <Link
+              href="https://github.com/kennethryandy/QuizGame"
+              className={classes.code}
+              rel="noopener noreferrer"
+            >
               <CodeIcon /> View Code
             </Link>
           </div>
         </div>
         <div className={classes.imgContainer}>
-          <a href="#" target="_blank" rel="noopener noreferrer">
+          <a
+            href="https://quiz-clone.netlify.app"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <img src={quizgame} alt="Quiz Game" />
           </a>
         </div>
