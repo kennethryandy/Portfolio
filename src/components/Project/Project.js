@@ -90,17 +90,23 @@ function Project() {
       </Paper>
       <Paper className={classes.projectItem} elevation={2}>
         <div className={classes.projectInfo}>
-          <div>
+          <div className={classes.infoText}>
             <Typography variant="h5" gutterBottom>
-              Covid19 Tracker
+              Covid-19 Tracker
             </Typography>
             <Typography variant="body1">
-              lorem ipsum lorem ipsum lorem ipsumlorem ipsumlorem ipsumlorem
-              ipsumlorem ipsumlorem ipsum
+              An app that track corona virus cases, recoveries and deaths world
+              wide. It let the user check covid19 cases in any country, it also
+              have a map and graph on it.
             </Typography>
             <Typography variant="subtitle2">Built with</Typography>
             <ul>
               <li>React</li>
+              <li>Material-UI</li>
+              <li>Leaflet</li>
+              <li>ChartJs</li>
+              <li>Covid19 API</li>
+              <li>Disease API</li>
             </ul>
           </div>
           <div className={classes.projectButtons}>
@@ -145,17 +151,21 @@ function Project() {
           </a>
         </div>
         <div className={classes.projectInfo}>
-          <div>
+          <div className={classes.infoText}>
             <Typography variant="h5" gutterBottom>
               Social Clone
             </Typography>
             <Typography variant="body1">
-              lorem ipsum lorem ipsum lorem ipsumlorem ipsumlorem ipsumlorem
-              ipsumlorem ipsumlorem ipsum
+              A social media app, that let user post, like and comment. It has a
+              RESTFUL API that is hosted in a separate server.
             </Typography>
             <Typography variant="subtitle2">Built with</Typography>
             <ul>
-              <li>React</li>
+              <li>React/Redux</li>
+              <li>Material-UI</li>
+              <li>Express</li>
+              <li>Graphql</li>
+              <li>MongoDB</li>
             </ul>
           </div>
           <div className={classes.projectButtons}>
@@ -182,7 +192,7 @@ function Project() {
       </Paper>
       <Paper className={classes.projectItem} elevation={2}>
         <div className={classes.projectInfo}>
-          <div>
+          <div className={classes.infoText}>
             <Typography variant="h5" gutterBottom>
               Quiz Game
             </Typography>
