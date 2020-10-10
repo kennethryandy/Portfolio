@@ -8,7 +8,7 @@ import Contact from "./components/Contact/Contact";
 import Project from "./components/Project/Project";
 
 const theme = createMuiTheme({
-  type: "dark",
+  type: "light",
   palette: {
     // primary: {
     //   light: "#434d63",
@@ -33,11 +33,13 @@ const theme = createMuiTheme({
   typography: {
     fontFamily: [
       '"Poppins"',
+      '"Montserrat"',
       '"Roboto"',
       "-apple-system",
       "BlinkMacSystemFont",
       '"Segoe UI"',
       '"Helvetica Neue"',
+      '"Oxygen"',
       "Arial",
       "sans-serif",
       '"Apple Color Emoji"',
@@ -49,7 +51,6 @@ const theme = createMuiTheme({
 
 function App() {
   const [navBar, setNavBar] = useState(true);
-  console.log(theme.palette);
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />

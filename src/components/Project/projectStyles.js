@@ -24,20 +24,20 @@ export default makeStyles((theme) => ({
       overflow: "hidden",
       display: "block",
     },
-    "&:hover:after": {
-      content: '""',
-      transition: "all,ease-in-out .2s",
-      position: "absolute",
-      cursor: "pointer",
-      top: 0,
-      zIndex: 1,
-      width: "100%",
-      height: "100%",
-      backgroundColor: "rgba(21,21,21,0)",
-      borderRadius: 4,
-      backgroundImage:
-        "-webkit-linear-gradient(180deg,rgba(21,21,21,0),#14213d), -webkit-linear-gradient(360deg,rgba(21,21,21,0),#14213d)",
-    },
+    // "&:hover:after": {
+    //   content: '""',
+    //   transition: "all,ease-in-out .2s",
+    //   position: "absolute",
+    //   cursor: "pointer",
+    //   top: 0,
+    //   zIndex: 1,
+    //   width: "100%",
+    //   height: "100%",
+    //   backgroundColor: "rgba(21,21,21,0)",
+    //   borderRadius: 4,
+    //   backgroundImage:
+    //     "-webkit-linear-gradient(180deg,rgba(21,21,21,0),#14213d), -webkit-linear-gradient(360deg,rgba(21,21,21,0),#14213d)",
+    // },
     "&:hover img": { transform: "scale(1.1)" },
     "& img": {
       width: "100%",
@@ -59,6 +59,7 @@ export default makeStyles((theme) => ({
   infoText: {
     "& h5": { fontSize: "1.8rem" },
     "& ul": { margin: 0, marginBottom: theme.spacing(1) },
+    "& p": { textAlign: "justify" },
   },
   projectButtons: {
     display: "flex",
@@ -72,16 +73,18 @@ export default makeStyles((theme) => ({
     alignItems: "center",
     cursor: "pointer",
     fontSize: "1rem",
+    [theme.breakpoints.down("sm")]: { fontSize: 12 },
   },
   demo: {
     borderRadius: "999px",
     marginRight: theme.spacing(1),
-    [theme.breakpoints.only("sm")]: { fontSize: 10 },
+    [theme.breakpoints.down("sm")]: { fontSize: 12 },
   },
   hr: {
     backgroundColor: "#14213d",
     width: 360,
     marginBottom: theme.spacing(1),
+    [theme.breakpoints.down("sm")]: { width: 240 },
   },
   imgLink: {
     position: "absolute",

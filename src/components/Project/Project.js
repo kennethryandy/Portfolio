@@ -11,7 +11,6 @@ import ArrowIcon from "@material-ui/icons/ArrowForwardIos";
 
 function Project() {
   const classes = projectStyles();
-  const [isHover, setIsHover] = useState(false);
 
   return (
     <section className={classes.project} id="projects">
@@ -21,13 +20,7 @@ function Project() {
       </Typography>
       <Divider className={classes.hr} />
       <Paper className={classes.projectItem} elevation={2}>
-        <div
-          className={classes.imgContainer}
-          onMouseEnter={() => setIsHover(true)}
-          onMouseLeave={() => setIsHover(false)}
-          onTouchStart={() => setIsHover(true)}
-          onTouchEnd={() => setIsHover(false)}
-        >
+        <div className={classes.imgContainer}>
           <a
             href="https://zmovies.netlify.app"
             target="_blank"
@@ -35,19 +28,6 @@ function Project() {
           >
             <img src={zmovies} alt="zmovies" />
           </a>
-          {isHover && (
-            <div className={classes.imgLink}>
-              <Button
-                href="https://zmovies.netlify.app"
-                target="_blank"
-                rel="noopener noreferrer"
-                variant="outlined"
-                endIcon={<ArrowIcon />}
-              >
-                View Project
-              </Button>
-            </div>
-          )}
         </div>
         <div className={classes.projectInfo}>
           <div className={classes.infoText}>
