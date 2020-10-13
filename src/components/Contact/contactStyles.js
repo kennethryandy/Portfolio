@@ -5,6 +5,7 @@ export default makeStyles((theme) => ({
   contact: {
     backgroundColor: "#14213d",
     height: "90vh",
+    color: "#e0e0e0",
   },
   title: {
     textAlign: "center",
@@ -27,5 +28,11 @@ export default makeStyles((theme) => ({
   textField: {
     "& fieldset": { borderColor: "#FFF" },
     margin: `${theme.spacing(1)}px 0`,
+    "& label": {
+      color: "#e0e0e0",
+    },
+    "& input": {
+      color: "#e0e0e0",
+    },
   },
 }));

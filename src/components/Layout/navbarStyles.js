@@ -14,6 +14,12 @@ export default makeStyles((theme) => ({
   title: {
     [theme.breakpoints.between("md", "lg")]: { fontSize: "1.5rem " },
     fontWeight: "600 ",
+    display: "flex",
+  },
+  brandName: {
+    width: 80,
+    margin: 0,
+    overflow: "hidden",
   },
   navlink: {
     "&:hover": {

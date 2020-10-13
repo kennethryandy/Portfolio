@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import covid19 from "../../assets/covid19.png";
 import zmovies from "../../assets/zmovies.png";
 import socialclone from "../../assets/socialclone.png";
@@ -7,7 +7,6 @@ import quizgame from "../../assets/quizgame.png";
 import { Button, Divider, Link, Paper, Typography } from "@material-ui/core";
 import projectStyles from "./projectStyles";
 import CodeIcon from "@material-ui/icons/Code";
-import ArrowIcon from "@material-ui/icons/ArrowForwardIos";
 
 function Project() {
   const classes = projectStyles();

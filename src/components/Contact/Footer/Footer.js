@@ -7,6 +7,7 @@ import FacebookIcon from "@material-ui/icons/Facebook";
 
 const useStyles = makeStyles((theme) => ({
   footer: {
+    color: "#e0e0e0",
     height: "100%",
     padding: 16,
     backgroundColor: "#000000",
@@ -23,9 +24,19 @@ const useStyles = makeStyles((theme) => ({
   },
   socialmedia: {
     "& svg": { margin: "0 8px" },
+  },
+  socialmediaLinks: {
     display: "flex",
     alignItems: "center",
     margin: "0 16px",
+    textDecoration: "none",
+    color: "#e0e0e0",
+    "&:hover": {
+      textDecoration: "underline",
+      "& svg": {
+        color: "#4dabf5",
+      },
+    },
   },
   email: {
     textDecoration: "underline",
@@ -63,16 +74,37 @@ function Footer() {
       </Grid>
       <Grid className={classes.col} item style={{ display: "flex" }}>
         <div className={classes.socialmedia}>
-          <GitHubIcon />
-          <Typography variant="subtitle2">Github</Typography>
+          <a
+            href="https://github.com/kennethryandy"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={classes.socialmediaLinks}
+          >
+            <GitHubIcon />
+            <Typography variant="subtitle2">Github</Typography>
+          </a>
         </div>
         <div className={classes.socialmedia}>
-          <LinkedInIcon />
-          <Typography variant="subtitle2">LinkedIn</Typography>
+          <a
+            href="https://www.linkedin.com/in/kennethryan-dy-593709147/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={classes.socialmediaLinks}
+          >
+            <LinkedInIcon />
+            <Typography variant="subtitle2">LinkedIn</Typography>
+          </a>
         </div>
         <div className={classes.socialmedia}>
-          <FacebookIcon />
-          <Typography variant="subtitle2">Facebook</Typography>
+          <a
+            href="https://www.facebook.com/Slickwit21"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={classes.socialmediaLinks}
+          >
+            <FacebookIcon />
+            <Typography variant="subtitle2">Facebook</Typography>
+          </a>
         </div>
       </Grid>
     </Grid>

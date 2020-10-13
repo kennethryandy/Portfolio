@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 //material-ui
 import { Grid, Typography, Paper, Divider } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
@@ -12,7 +12,6 @@ const useStyles = makeStyles((theme) => ({
     "& i": {
       fontSize: "2.3rem",
     },
-    "& .MuiPaper-root": { color: "black" },
   },
   title: {
     textAlign: "center",
@@ -21,6 +20,8 @@ const useStyles = makeStyles((theme) => ({
     margin: theme.spacing(2),
   },
   paper: {
+    opacity: 0,
+    transform: "translateY(20px)",
     padding: 1,
     textAlign: "center",
     margin: theme.spacing(2),
@@ -40,65 +41,87 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-function Card() {
+function Card({ gsap }) {
   const classes = useStyles();
+
+  useEffect(() => {
+    gsap.to(".box", {
+      scrollTrigger: {
+        trigger: ".info",
+        toggleActions: "restart none restart reset",
+      },
+      duration: 0.4,
+      opacity: 1,
+      ease: "power3.in",
+      y: 0,
+      stagger: 0.1,
+      delay: -0.8,
+    });
+    // eslint-disable-next-line
+  }, []);
+
   return (
-    <Grid container className={classes.container}>
-      <Grid md={4} sm={6} xs={6} item className={classes.item}>
-        <Paper className={classes.paper}>
-          <i className="fas fa-laptop-code" />
-          <Typography className={classes.title} variant="h6">
-            Front-end
-          </Typography>
-          <Divider className={classes.hr} variant="middle" />
-          <Typography className={classes.skills} variant="body1">
-            HTML5, CSS/SASS/JSS, Javascript, Jquery, Ajax
-          </Typography>
-          <Typography className={classes.title} variant="subtitle2">
-            Frameworks
-          </Typography>
-          <Typography className={classes.skills} variant="body1">
-            REACT, REDUX, VUE
-          </Typography>
-        </Paper>
+    <>
+      <Typography gutterBottom variant="h5" className="box">
+        Skills & Tools
+      </Typography>
+      <Grid container className={classes.container}>
+        <Grid md={4} sm={6} xs={6} item className={classes.item}>
+          <Paper className={`${classes.paper} box`}>
+            <i className="fas fa-laptop-code" />
+            <Typography className={classes.title} variant="h6">
+              Front-end
+            </Typography>
+            <Divider className={classes.hr} variant="middle" />
+            <Typography className={classes.skills} variant="body1">
+              HTML5, CSS/SASS/JSS, Javascript, Jquery, Ajax
+            </Typography>
+            <Typography className={classes.title} variant="subtitle2">
+              Frameworks
+            </Typography>
+            <Typography className={classes.skills} variant="body1">
+              REACT, REDUX, VUE
+            </Typography>
+          </Paper>
+        </Grid>
+        <Grid md={4} sm={6} xs={6} item className={classes.item}>
+          <Paper className={`${classes.paper} box`}>
+            <i className="fas fa-database" />
+            <Typography className={classes.title} variant="h6">
+              Back-end
+            </Typography>
+            <Divider className={classes.hr} variant="middle" />
+            <Typography className={classes.skills} variant="body1">
+              PHP, NodeJs, Express, Graphql, REST, Python, Java
+            </Typography>
+            <Typography className={classes.title} variant="subtitle2">
+              Database
+            </Typography>
+            <Typography className={classes.skills} variant="body1">
+              MongoDB, Firebase, SQL
+            </Typography>
+          </Paper>
+        </Grid>
+        <Grid md={4} sm={12} xs={12} item className={classes.item}>
+          <Paper className={`${classes.paper} box`}>
+            <i className="fas fa-cogs" />
+            <Typography className={classes.title} variant="h6">
+              Others
+            </Typography>
+            <Divider className={classes.hr} variant="middle" />
+            <Typography className={classes.skills} variant="body1">
+              NPM, PIP, Git/Github, CLI, VS Code,
+            </Typography>
+            <Typography className={classes.title} variant="subtitle2">
+              Design
+            </Typography>
+            <Typography className={classes.skills} variant="body1">
+              Adobe Photoshop, Adobe Illustrator, COREL Draw,
+            </Typography>
+          </Paper>
+        </Grid>
       </Grid>
-      <Grid md={4} sm={6} xs={6} item className={classes.item}>
-        <Paper className={classes.paper}>
-          <i className="fas fa-database" />
-          <Typography className={classes.title} variant="h6">
-            Back-end
-          </Typography>
-          <Divider className={classes.hr} variant="middle" />
-          <Typography className={classes.skills} variant="body1">
-            PHP, NodeJs, Express, Graphql, REST, Python, Java
-          </Typography>
-          <Typography className={classes.title} variant="subtitle2">
-            Database
-          </Typography>
-          <Typography className={classes.skills} variant="body1">
-            MongoDB, Firebase, SQL
-          </Typography>
-        </Paper>
-      </Grid>
-      <Grid md={4} sm={12} xs={12} item className={classes.item}>
-        <Paper className={classes.paper}>
-          <i className="fas fa-cogs" />
-          <Typography className={classes.title} variant="h6">
-            Others
-          </Typography>
-          <Divider className={classes.hr} variant="middle" />
-          <Typography className={classes.skills} variant="body1">
-            NPM, PIP, Git/Github, CLI, VS Code,
-          </Typography>
-          <Typography className={classes.title} variant="subtitle2">
-            Design
-          </Typography>
-          <Typography className={classes.skills} variant="body1">
-            Adobe Photoshop, Adobe Illustrator, COREL Draw,
-          </Typography>
-        </Paper>
-      </Grid>
-    </Grid>
+    </>
   );
 }
 

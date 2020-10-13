@@ -4,7 +4,6 @@ export default makeStyles((theme) => ({
   appBarSpacer: theme.mixins.toolbar,
   project: {
     height: "100%",
-    color: "black",
     width: "90%",
     margin: "auto",
   },
@@ -14,7 +13,6 @@ export default makeStyles((theme) => ({
     justifyContent: "center",
     margin: "3rem auto",
     padding: theme.spacing(3),
-    color: "black",
   },
   imgContainer: {
     flex: 1.3,
@@ -24,20 +22,20 @@ export default makeStyles((theme) => ({
       overflow: "hidden",
       display: "block",
     },
-    // "&:hover:after": {
-    //   content: '""',
-    //   transition: "all,ease-in-out .2s",
-    //   position: "absolute",
-    //   cursor: "pointer",
-    //   top: 0,
-    //   zIndex: 1,
-    //   width: "100%",
-    //   height: "100%",
-    //   backgroundColor: "rgba(21,21,21,0)",
-    //   borderRadius: 4,
-    //   backgroundImage:
-    //     "-webkit-linear-gradient(180deg,rgba(21,21,21,0),#14213d), -webkit-linear-gradient(360deg,rgba(21,21,21,0),#14213d)",
-    // },
+
+    "&:hover:after": {
+      content: '""',
+      transition: "all,ease-in-out .2s",
+      position: "absolute",
+      cursor: "pointer",
+      top: 0,
+      zIndex: 1,
+      width: "100%",
+      height: "100%",
+      borderRadius: 4,
+      background: "#151515",
+      opacity: ".2",
+    },
     "&:hover img": { transform: "scale(1.1)" },
     "& img": {
       width: "100%",
