@@ -2,7 +2,7 @@ import { makeStyles } from "@material-ui/core/styles";
 
 export default makeStyles((theme) => ({
   navbar: {
-    transition: `background-color 200ms ${theme.transitions.easing.easeInOut}`,
+    transition: `background-color 400ms ${theme.transitions.easing.easeInOut}`,
   },
   nav: {
     width: "90%",
@@ -31,6 +31,9 @@ export default makeStyles((theme) => ({
     [theme.breakpoints.between("sm", "lg")]: { fontSize: "1rem" },
     [theme.breakpoints.only("xl")]: { fontSize: "1.5rem" },
     [theme.breakpoints.only("xs")]: { display: "none" },
+  },
+  navIcon: {
+    margin: "0",
   },
   navlinkScondary: {
     "&:hover": {

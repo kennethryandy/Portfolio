@@ -19,6 +19,9 @@ const useStyles = makeStyles((theme) => ({
   skills: {
     margin: theme.spacing(2),
   },
+  skill: {
+    opacity: 0,
+  },
   paper: {
     opacity: 0,
     transform: "translateY(20px)",
@@ -47,8 +50,8 @@ function Card({ gsap }) {
   useEffect(() => {
     gsap.to(".box", {
       scrollTrigger: {
-        trigger: ".info",
-        toggleActions: "restart none restart reset",
+        trigger: ".box",
+        toggleActions: "restart none none reset",
       },
       duration: 0.4,
       opacity: 1,
@@ -62,7 +65,7 @@ function Card({ gsap }) {
 
   return (
     <>
-      <Typography gutterBottom variant="h5" className="box">
+      <Typography gutterBottom variant="h5" className={`${classes.skill} box`}>
         Skills & Tools
       </Typography>
       <Grid container className={classes.container}>

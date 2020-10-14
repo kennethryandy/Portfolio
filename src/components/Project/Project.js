@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import covid19 from "../../assets/covid19.png";
 import zmovies from "../../assets/zmovies.png";
 import socialclone from "../../assets/socialclone.png";
@@ -7,9 +7,15 @@ import quizgame from "../../assets/quizgame.png";
 import { Button, Divider, Link, Paper, Typography } from "@material-ui/core";
 import projectStyles from "./projectStyles";
 import CodeIcon from "@material-ui/icons/Code";
+import scrollTriggers from "./scrollTriggers";
 
-function Project() {
+function Project({ gsap }) {
   const classes = projectStyles();
+
+  useEffect(() => {
+    scrollTriggers(gsap);
+    //eslint-disable-next-line
+  }, []);
 
   return (
     <section className={classes.project} id="projects">
@@ -24,25 +30,38 @@ function Project() {
             href="https://zmovies.netlify.app"
             target="_blank"
             rel="noopener noreferrer"
+            className="link1"
           >
-            <img src={zmovies} alt="zmovies" />
+            <div className="project-img1">
+              <img src={zmovies} alt="zmovies" />
+            </div>
           </a>
         </div>
         <div className={classes.projectInfo}>
           <div className={classes.infoText}>
-            <Typography variant="h5" gutterBottom>
+            <Typography className="project-title1" variant="h5" gutterBottom>
               zMovies
             </Typography>
-            <Typography variant="body1" gutterBottom>
+            <Typography variant="body1" className="project-body1" gutterBottom>
               Browse your favorite movies and watch trailer. The goal of this
               project is to use dynamic components for efficiency and better
               performance.
             </Typography>
-            <Typography variant="subtitle2">Built with</Typography>
+            <div className={classes.listItem}>
+              <Typography className="lists1" variant="subtitle2">
+                Built with
+              </Typography>
+            </div>
             <ul>
-              <li>React</li>
-              <li>Material-UI</li>
-              <li>The Movie Database API</li>
+              <div className={classes.listItem}>
+                <li className="lists1">React</li>
+              </div>
+              <div className={classes.listItem}>
+                <li className="lists1">Material-UI</li>
+              </div>
+              <div className={classes.listItem}>
+                <li className="lists1">The Movie Database API</li>
+              </div>
             </ul>
           </div>
           <div className={classes.projectButtons}>
@@ -70,22 +89,38 @@ function Project() {
       <Paper className={classes.projectItem} elevation={2}>
         <div className={classes.projectInfo}>
           <div className={classes.infoText}>
-            <Typography variant="h5" gutterBottom>
+            <Typography variant="h5" className="project-title2" gutterBottom>
               Covid-19 Tracker
             </Typography>
-            <Typography variant="body1">
+            <Typography variant="body1" className="project-body2">
               An app that track corona virus cases, recoveries and deaths world
               wide. It let the user check covid19 cases in any country, it also
               have a map and graph on it.
             </Typography>
-            <Typography variant="subtitle2">Built with</Typography>
+            <div className={classes.listItem}>
+              <Typography className="lists2" variant="subtitle2">
+                Built with
+              </Typography>
+            </div>
             <ul>
-              <li>React</li>
-              <li>Material-UI</li>
-              <li>Leaflet</li>
-              <li>ChartJs</li>
-              <li>Covid19 API</li>
-              <li>Disease API</li>
+              <div className={classes.listItem}>
+                <li className="lists2">React</li>
+              </div>
+              <div className={classes.listItem}>
+                <li className="lists2">Material-UI</li>
+              </div>
+              <div className={classes.listItem}>
+                <li className="lists2">Leaflet</li>
+              </div>
+              <div className={classes.listItem}>
+                <li className="lists2">ChartJs</li>
+              </div>
+              <div className={classes.listItem}>
+                <li className="lists2">Covid19 API</li>
+              </div>
+              <div className={classes.listItem}>
+                <li className="lists2">Disease API</li>
+              </div>
             </ul>
           </div>
           <div className={classes.projectButtons}>
@@ -103,7 +138,7 @@ function Project() {
               href="https://github.com/kennethryandy/Covid-19-Tracker"
               target="_blank"
               rel="noopener noreferrer"
-              className={classes.code}
+              className="link2"
             >
               <CodeIcon /> View Code
             </Link>
@@ -114,8 +149,11 @@ function Project() {
             href="https://covid19-status-track.netlify.app"
             target="_blank"
             rel="noopener noreferrer"
+            className="link2"
           >
-            <img src={covid19} alt="covid19-tracker" />
+            <div className="project-img2">
+              <img src={covid19} alt="covid19-tracker" />
+            </div>
           </a>
         </div>
       </Paper>
@@ -125,26 +163,43 @@ function Project() {
             href="https://socialclone.netlify.app"
             target="_blank"
             rel="noopener noreferrer"
+            className="link3"
           >
-            <img src={socialclone} alt="socialclone" />
+            <div className="project-img3">
+              <img src={socialclone} alt="socialclone" />
+            </div>
           </a>
         </div>
         <div className={classes.projectInfo}>
           <div className={classes.infoText}>
-            <Typography variant="h5" gutterBottom>
+            <Typography variant="h5" gutterBottom className="project-title3">
               Social Clone
             </Typography>
-            <Typography variant="body1">
+            <Typography variant="body1" className="project-body3">
               A social media app, that let user post, like and comment. It has a
               RESTFUL API that is hosted in a separate server.
             </Typography>
-            <Typography variant="subtitle2">Built with</Typography>
+            <div className={classes.listItem}>
+              <Typography variant="subtitle2" className="lists3">
+                Built with
+              </Typography>
+            </div>
             <ul>
-              <li>React/Redux</li>
-              <li>Material-UI</li>
-              <li>Express</li>
-              <li>Graphql</li>
-              <li>MongoDB</li>
+              <div className={classes.listItem}>
+                <li className="lists3">React/Redux</li>
+              </div>
+              <div className={classes.listItem}>
+                <li className="lists3">Material-UI</li>
+              </div>
+              <div className={classes.listItem}>
+                <li className="lists3">Express</li>
+              </div>
+              <div className={classes.listItem}>
+                <li className="lists3">Graphql</li>
+              </div>
+              <div className={classes.listItem}>
+                <li className="lists3">MongoDB</li>
+              </div>
             </ul>
           </div>
           <div className={classes.projectButtons}>
@@ -172,16 +227,22 @@ function Project() {
       <Paper className={classes.projectItem} elevation={2}>
         <div className={classes.projectInfo}>
           <div className={classes.infoText}>
-            <Typography variant="h5" gutterBottom>
+            <Typography variant="h5" gutterBottom className="project-title4">
               Quiz Game
             </Typography>
-            <Typography variant="body1">
+            <Typography variant="body1" className="project-body4">
               lorem ipsum lorem ipsum lorem ipsumlorem ipsumlorem ipsumlorem
               ipsumlorem ipsumlorem ipsum
             </Typography>
-            <Typography variant="subtitle2">Built with</Typography>
+            <div className={classes.listItem}>
+              <Typography variant="subtitle2" className="lists4">
+                Built with
+              </Typography>
+            </div>
             <ul>
-              <li>React</li>
+              <div className={classes.listItem}>
+                <li className="lists4">React</li>
+              </div>
             </ul>
           </div>
           <div className={classes.projectButtons}>
@@ -209,8 +270,11 @@ function Project() {
             href="https://quiz-clone.netlify.app"
             target="_blank"
             rel="noopener noreferrer"
+            className="link4"
           >
-            <img src={quizgame} alt="Quiz Game" />
+            <div className="project-img4">
+              <img src={quizgame} alt="Quiz Game" />
+            </div>
           </a>
         </div>
       </Paper>

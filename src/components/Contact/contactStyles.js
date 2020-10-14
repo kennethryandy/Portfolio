@@ -4,7 +4,7 @@ export default makeStyles((theme) => ({
   appBarSpacer: theme.mixins.toolbar,
   contact: {
     backgroundColor: "#14213d",
-    height: "90vh",
+    height: "100%",
     color: "#e0e0e0",
   },
   title: {
@@ -15,10 +15,10 @@ export default makeStyles((theme) => ({
     alignItems: "center",
     justifyContent: "center",
     width: "90%",
-    height: "60%",
     margin: "auto",
   },
   form: {
+    margin: `${theme.spacing(4)}px 0`,
     "& button": {
       margin: `${theme.spacing(1)}px 0`,
       width: "30%",

@@ -1,9 +1,17 @@
 import React, { useEffect, useRef } from "react";
 //material-ui
 import navbarStyles from "./navbarStyles";
-import { AppBar, Link, Toolbar, Typography } from "@material-ui/core";
+import {
+  AppBar,
+  IconButton,
+  Link,
+  Toolbar,
+  Typography,
+} from "@material-ui/core";
+import DarkIcon from "@material-ui/icons/Brightness4";
+import LightIcon from "@material-ui/icons/Brightness7";
 
-function Navbar({ navBar, gsap }) {
+function Navbar({ navBar, gsap, dark, setDark }) {
   const classes = navbarStyles();
   const titleRef = useRef(null);
 
@@ -77,13 +85,40 @@ function Navbar({ navBar, gsap }) {
             >
               <span className="links">contact</span>
             </Link>
+
+            <IconButton
+              color="inherit"
+              className={`${classes.navlink} ${classes.navIcon}`}
+              onClick={() => setDark(!dark)}
+            >
+              {dark ? (
+                <span className="links">
+                  <LightIcon />
+                </span>
+              ) : (
+                <span className="links">
+                  <DarkIcon />
+                </span>
+              )}
+            </IconButton>
+
             <Link
               href="#projects"
               underline="none"
               color="inherit"
-              className={classes.navlinkScondary}
+              className={`${classes.navlinkScondary} ${classes.navIcon}`}
             >
               <span className="links">projects</span>
+            </Link>
+            <Link
+              href="#contact"
+              underline="none"
+              color="inherit"
+              className={classes.navlinkScondary}
+            >
+              <span className="links">
+                <IconButton>{dark ? <LightIcon /> : <DarkIcon />}</IconButton>
+              </span>
             </Link>
           </div>
         </div>

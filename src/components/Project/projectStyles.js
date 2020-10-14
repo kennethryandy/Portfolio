@@ -11,8 +11,10 @@ export default makeStyles((theme) => ({
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
-    margin: "3rem auto",
+    margin: "5rem auto",
     padding: theme.spacing(3),
+    overflow: "hidden",
+    [theme.breakpoints.down("md")]: { margin: "3rem auto" },
   },
   imgContainer: {
     flex: 1.3,
@@ -55,6 +57,7 @@ export default makeStyles((theme) => ({
     [theme.breakpoints.only("xs")]: { margin: `0 ${theme.spacing(4)}px` },
   },
   infoText: {
+    overflow: "hidden",
     "& h5": { fontSize: "1.8rem" },
     "& ul": { margin: 0, marginBottom: theme.spacing(1) },
     "& p": { textAlign: "justify" },
@@ -96,5 +99,9 @@ export default makeStyles((theme) => ({
       color: "#4dabf5",
       fontSize: "1rem",
     },
+  },
+  listItem: {
+    height: 24,
+    overflow: "hidden",
   },
 }));

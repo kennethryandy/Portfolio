@@ -1,18 +1,17 @@
 import React, { useEffect } from "react";
-import gsap from "../../gsap";
 //material-ui
 import aboutStyles from "./aboutStyles";
 import { Typography } from "@material-ui/core";
 import Card from "./Card/Card";
 
-function About() {
+function About({ gsap }) {
   const classes = aboutStyles();
 
   useEffect(() => {
     gsap.from(".info", {
       scrollTrigger: {
         trigger: ".info",
-        toggleActions: "restart none restart reset",
+        toggleActions: "restart none none reset",
       },
       duration: 0.6,
       opacity: 0,
