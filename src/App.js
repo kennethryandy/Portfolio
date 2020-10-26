@@ -28,7 +28,7 @@ const typography = {
 
 function App() {
   const [navBar, setNavBar] = useState(true);
-  const [dark, setDark] = useState(true);
+  const [dark, setDark] = useState(false);
 
   const theme = createMuiTheme({
     palette: {

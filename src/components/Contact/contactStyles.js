@@ -6,6 +6,7 @@ export default makeStyles((theme) => ({
     backgroundColor: "#14213d",
     height: "100%",
     color: "#e0e0e0",
+    minHeight: '85vh'
   },
   title: {
     textAlign: "center",

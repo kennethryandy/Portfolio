@@ -75,7 +75,7 @@ function Navbar({ navBar, gsap, dark, setDark }) {
               color="inherit"
               className={classes.navlink}
             >
-              <span className="links">projects</span>
+              <span className="links">portfolio</span>
             </Link>
             <Link
               href="#contact"
@@ -108,7 +108,7 @@ function Navbar({ navBar, gsap, dark, setDark }) {
               color="inherit"
               className={`${classes.navlinkScondary} ${classes.navIcon}`}
             >
-              <span className="links">projects</span>
+              <span className="links">portfolio</span>
             </Link>
             <Link
               href="#contact"

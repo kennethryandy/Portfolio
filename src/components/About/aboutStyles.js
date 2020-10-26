@@ -9,6 +9,7 @@ export default makeStyles((theme) => ({
     alignItems: "center",
     margin: "auto",
     width: "90%",
+    minHeight: '100vh'
   },
   info: {
     [theme.breakpoints.between("md", "lg")]: { width: "75%" },

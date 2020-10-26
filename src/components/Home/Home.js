@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Typed from "react-typed";
 import VisibilitySensor from "react-visibility-sensor";
+import resume from '../../assets/RESUME.pdf'
 //material-ui
 import homeStyles from "./homeStyles";
 import { Button, IconButton, Typography } from "@material-ui/core";
@@ -83,8 +84,11 @@ function Home({ nav, width, gsap }) {
                     }
                     onMouseEnter={() => setHoverRsm(true)}
                     onMouseLeave={() => setHoverRsm(false)}
+                    href={resume}
+                    target="_blank"
+                    rel="noopener noreferrer"
                   >
-                    Download Resume
+                    View Resume
                   </Button>
                 </div>
                 <div className="home-button">

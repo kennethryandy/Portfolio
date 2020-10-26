@@ -4,7 +4,7 @@ export default function (gsap) {
     scrollTrigger: {
       trigger: ".link1",
       toggleActions: "restart none none reset",
-      start: "-50 100%",
+      // start: "-50 100%",
     },
     duration: 1.2,
     y: 1280,
@@ -14,7 +14,7 @@ export default function (gsap) {
     scrollTrigger: {
       trigger: ".link1",
       toggleActions: "restart none none reset",
-      start: "-50 100%",
+      // start: "-50 100%",
     },
     duration: 1.2,
     x: 500,
@@ -24,7 +24,7 @@ export default function (gsap) {
     scrollTrigger: {
       trigger: ".link1",
       toggleActions: "restart none none reset",
-      start: "-50 100%",
+      // start: "-50 100%",
     },
     delay: 0.2,
     duration: 1,
@@ -46,7 +46,7 @@ export default function (gsap) {
     scrollTrigger: {
       trigger: ".link2",
       toggleActions: "restart none none reset",
-      start: "-50 100%",
+      // start: "-50 100%",
     },
     duration: 1.2,
     y: 1280,
@@ -56,7 +56,7 @@ export default function (gsap) {
     scrollTrigger: {
       trigger: ".link2",
       toggleActions: "restart none none reset",
-      start: "-50 100%",
+      // start: "-50 100%",
     },
     duration: 1.2,
     x: -500,
@@ -66,7 +66,7 @@ export default function (gsap) {
     scrollTrigger: {
       trigger: ".link2",
       toggleActions: "restart none none reset",
-      start: "-50 100%",
+      // start: "-50 100%",
     },
     delay: 0.2,
     duration: 1,
@@ -77,7 +77,7 @@ export default function (gsap) {
     scrollTrigger: {
       trigger: ".link2",
       toggleActions: "restart none none reset",
-      start: "-50 100%",
+      // start: "-50 100%",
     },
     duration: 1.2,
     y: 24,
@@ -89,7 +89,7 @@ export default function (gsap) {
     scrollTrigger: {
       trigger: ".link3",
       toggleActions: "restart none none reset",
-      start: "-50 100%",
+      // start: "-50 100%",
     },
     duration: 1.2,
     y: 1280,
@@ -99,7 +99,7 @@ export default function (gsap) {
     scrollTrigger: {
       trigger: ".link3",
       toggleActions: "restart none none reset",
-      start: "-50 100%",
+      // start: "-50 100%",
     },
     duration: 1.2,
     x: 500,
@@ -109,7 +109,7 @@ export default function (gsap) {
     scrollTrigger: {
       trigger: ".link3",
       toggleActions: "restart none none reset",
-      start: "-50 100%",
+      // start: "-50 100%",
     },
     duration: 1,
     opacity: 0,
@@ -120,6 +120,7 @@ export default function (gsap) {
     scrollTrigger: {
       trigger: ".link3",
       toggleActions: "restart none none reset",
+      // start: "-50 100%"
     },
     duration: 1.2,
     y: 24,
@@ -131,7 +132,7 @@ export default function (gsap) {
     scrollTrigger: {
       trigger: ".link4",
       toggleActions: "restart none none reset",
-      start: "150 100%",
+      // start: "-50 100%",
     },
     duration: 1.2,
     y: 1280,
@@ -141,7 +142,7 @@ export default function (gsap) {
     scrollTrigger: {
       trigger: ".link4",
       toggleActions: "restart none none reset",
-      start: "150 100%",
+      // start: "-50 100%"
     },
     duration: 1.2,
     x: -500,
@@ -151,7 +152,7 @@ export default function (gsap) {
     scrollTrigger: {
       trigger: ".link4",
       toggleActions: "restart none none reset",
-      start: "150 100%",
+      // start: "-50 100%"
     },
     duration: 1,
     opacity: 0,
@@ -162,7 +163,7 @@ export default function (gsap) {
     scrollTrigger: {
       trigger: ".link4",
       toggleActions: "restart none none reset",
-      start: "150 100%",
+      // start: "-50 100%"
     },
     duration: 1.2,
     y: 24,

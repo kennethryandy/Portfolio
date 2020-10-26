@@ -90,7 +90,7 @@ export default makeStyles((theme) => ({
     [theme.breakpoints.down("xs")]: { fontSize: ".7rem !important" },
   },
   btnResume: {
-    marginRight: `${theme.spacing(2)}px !important`,
+    marginRight: `${theme.spacing(3)}px !important`,
     border: "1px solid #ffffff !important",
     [theme.breakpoints.down("xs")]: { fontSize: ".7rem !important" },
     "&:hover": { textDecoration: "underline !important", color: "#e0e0e0" },

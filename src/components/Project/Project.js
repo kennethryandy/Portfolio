@@ -21,7 +21,7 @@ function Project({ gsap }) {
     <section className={classes.project} id="projects">
       <div className={classes.appBarSpacer} />
       <Typography variant="h4" className={classes.title} gutterBottom>
-        Some of my works.
+        My Latest Works.
       </Typography>
       <Divider className={classes.hr} />
       <Paper className={classes.projectItem} elevation={2}>
@@ -43,9 +43,7 @@ function Project({ gsap }) {
               zMovies
             </Typography>
             <Typography variant="body1" className="project-body1" gutterBottom>
-              Browse your favorite movies and watch trailer. The goal of this
-              project is to use dynamic components for efficiency and better
-              performance.
+            Browse your favorite movies and watch trailers it is a single page application that was built in React and React Router for easy and fast routing.. The goal of this project is to use dynamic components for efficiency and better performance.
             </Typography>
             <div className={classes.listItem}>
               <Typography className="lists1" variant="subtitle2">
@@ -93,9 +91,7 @@ function Project({ gsap }) {
               Covid-19 Tracker
             </Typography>
             <Typography variant="body1" className="project-body2">
-              An app that track corona virus cases, recoveries and deaths world
-              wide. It let the user check covid19 cases in any country, it also
-              have a map and graph on it.
+              An app that tracks coronavirus cases, recoveries and deaths world wide. It lets the user check covid19 cases in any country, it also has a map and graph on it.
             </Typography>
             <div className={classes.listItem}>
               <Typography className="lists2" variant="subtitle2">
@@ -138,7 +134,9 @@ function Project({ gsap }) {
               href="https://github.com/kennethryandy/Covid-19-Tracker"
               target="_blank"
               rel="noopener noreferrer"
-              className="link2"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={classes.code}
             >
               <CodeIcon /> View Code
             </Link>
@@ -176,8 +174,7 @@ function Project({ gsap }) {
               Social Clone
             </Typography>
             <Typography variant="body1" className="project-body3">
-              A social media app, that let user post, like and comment. It has a
-              RESTFUL API that is hosted in a separate server.
+              A social social media app that let users post, like and comment. It has a RESTFUL API that is hosted in a separate server.
             </Typography>
             <div className={classes.listItem}>
               <Typography variant="subtitle2" className="lists3">
@@ -186,7 +183,10 @@ function Project({ gsap }) {
             </div>
             <ul>
               <div className={classes.listItem}>
-                <li className="lists3">React/Redux</li>
+                <li className="lists3">React</li>
+              </div>
+              <div className={classes.listItem}>
+                <li className="lists3">Redux</li>
               </div>
               <div className={classes.listItem}>
                 <li className="lists3">Material-UI</li>
@@ -231,8 +231,7 @@ function Project({ gsap }) {
               Quiz Game
             </Typography>
             <Typography variant="body1" className="project-body4">
-              lorem ipsum lorem ipsum lorem ipsumlorem ipsumlorem ipsumlorem
-              ipsumlorem ipsumlorem ipsum
+            A trivia game that lets the user select a category and difficulties that is pulled through the open trivia API. It then randomly selects ten random questions depending on the category that user's choose and tracks the correct answers.
             </Typography>
             <div className={classes.listItem}>
               <Typography variant="subtitle2" className="lists4">
@@ -242,6 +241,12 @@ function Project({ gsap }) {
             <ul>
               <div className={classes.listItem}>
                 <li className="lists4">React</li>
+              </div>
+              <div className={classes.listItem}>
+                <li className="lists4">Material-UI</li>
+              </div>
+              <div className={classes.listItem}>
+                <li className="lists4">Open Trivia API</li>
               </div>
             </ul>
           </div>
@@ -259,6 +264,7 @@ function Project({ gsap }) {
             <Link
               href="https://github.com/kennethryandy/QuizGame"
               className={classes.code}
+              target="_blank"
               rel="noopener noreferrer"
             >
               <CodeIcon /> View Code
