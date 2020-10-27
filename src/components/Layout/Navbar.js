@@ -48,7 +48,7 @@ function Navbar({ navBar, gsap, dark, setDark }) {
           <Link href="#home" underline="none" color="inherit">
             <div className={classes.brandName}>
               <Typography ref={titleRef} variant="h6" className={classes.title}>
-                Ken D.
+                KD
               </Typography>
             </div>
           </Link>

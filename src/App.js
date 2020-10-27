@@ -7,6 +7,7 @@ import About from "./components/About/About";
 import Contact from "./components/Contact/Contact";
 import Project from "./components/Project/Project";
 import gsap from "./gsap";
+import Loading from "./components/Layout/Loading";
 
 const typography = {
   fontFamily: [
@@ -29,6 +30,7 @@ const typography = {
 function App() {
   const [navBar, setNavBar] = useState(true);
   const [dark, setDark] = useState(false);
+  const [loading, setLoading] = useState(true);
 
   const theme = createMuiTheme({
     palette: {
@@ -75,16 +77,27 @@ function App() {
 
   useEffect(() => {
     gsap.to(document.body, { duration: 0, css: { visibility: "visible" } });
+    setTimeout(() => {
+      setLoading(false)
+    }, 800);
   }, []);
 
   return (
     <ThemeProvider theme={dark ? darkTheme : theme}>
       <CssBaseline />
-      <Navbar navBar={navBar} gsap={gsap} dark={dark} setDark={setDark} />
-      <Home nav={setNavBar} gsap={gsap} />
-      <About gsap={gsap} />
-      <Project gsap={gsap} />
-      <Contact gsap={gsap} />
+      {loading ? 
+        <Loading/>
+       : 
+      (
+        <>
+        <Navbar navBar={navBar} gsap={gsap} dark={dark} setDark={setDark} />
+        <Home nav={setNavBar} gsap={gsap}/>
+        <About gsap={gsap} />
+        <Project gsap={gsap} />
+        <Contact gsap={gsap} />
+        </>
+      )
+      }
     </ThemeProvider>
   );
 }

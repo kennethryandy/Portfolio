@@ -7,7 +7,7 @@ import quizgame from "../../assets/quizgame.png";
 import { Button, Divider, Link, Paper, Typography } from "@material-ui/core";
 import projectStyles from "./projectStyles";
 import CodeIcon from "@material-ui/icons/Code";
-import scrollTriggers from "./scrollTriggers";
+import {scrollTriggers} from "./scrollTriggers";
 
 function Project({ gsap }) {
   const classes = projectStyles();

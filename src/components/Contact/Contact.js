@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useState} from "react";
 import emailjs from 'emailjs-com';
 //material-ui
 import { Typography, TextField, Button } from "@material-ui/core";
@@ -8,14 +8,25 @@ import Footer from "./Footer/Footer";
 
 function Contact() {
   const classes = contactStyles();
+  const [showMsg, setShowMsg] = useState(false)
+  const [loading, setLoading] = useState(false)
 
   const handleSubmit = e => {
     e.preventDefault()
+    setLoading(true)
     emailjs.sendForm('service_8uy6oii', 'template_c3kuanm', e.target, 'user_lwR1O0HcFGB2BCnsNBfVw')
       .then((result) => {
           console.log(result.text);
+          if(result.text === 'OK'){
+            setShowMsg(true)
+            setTimeout(() => {
+              setShowMsg(false)
+            }, 5000)
+            setLoading(false)
+          }
       }, (error) => {
           console.log(error.text);
+          setLoading(false)
       });
     e.target.reset()
   }
@@ -69,12 +80,14 @@ function Contact() {
                 color="secondary"
                 size="large"
                 type="submit"
+                disabled={loading}
               >
-                Send
+                {loading ? "Sending..." : "Send"}
               </Button>
             </div>
           </form>
         </div>
+        {showMsg && <Typography gutterBottom align="center" className={classes.msg}>Thank you for your email. I will get back to you shortly!</Typography>}
       </div>
       <Footer />
     </>

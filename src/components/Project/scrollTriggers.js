@@ -1,4 +1,4 @@
-export default function (gsap) {
+export const scrollTriggers = gsap => {
   //PROJECT !
   gsap.from(".project-img1", {
     scrollTrigger: {

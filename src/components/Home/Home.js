@@ -10,7 +10,7 @@ import FacebookIcon from "@material-ui/icons/Facebook";
 import LinkedInIcon from "@material-ui/icons/LinkedIn";
 import withWidth from "@material-ui/core/withWidth";
 
-function Home({ nav, width, gsap }) {
+function Home({ nav, width, gsap, setLoading }) {
   const classes = homeStyles();
   const [hover, setHover] = useState(false);
   const [hoverRsm, setHoverRsm] = useState(false);
