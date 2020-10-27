@@ -10,12 +10,12 @@
     {
       "src": "k-circle-50.png",
       "type": "image/png",
-      "sizes": "192x192"
+      "sizes": "50x50"
     },
     {
       "src": "k-circle-100.png",
       "type": "image/png",
-      "sizes": "512x512"
+      "sizes": "100x100"
     }
   ],
   "start_url": ".",
