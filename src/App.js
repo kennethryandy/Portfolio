@@ -82,8 +82,8 @@ function App() {
       <CssBaseline />
       <Navbar navBar={navBar} gsap={gsap} dark={dark} setDark={setDark} />
       <Home nav={setNavBar} gsap={gsap} />
-      <Project gsap={gsap} />
       <About gsap={gsap} />
+      <Project gsap={gsap} />
       <Contact gsap={gsap} />
     </ThemeProvider>
   );

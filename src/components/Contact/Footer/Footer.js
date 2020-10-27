@@ -31,10 +31,31 @@ const useStyles = makeStyles((theme) => ({
     margin: "0 16px",
     textDecoration: "none",
     color: "#e0e0e0",
+  },
+  github: {
     "&:hover": {
       textDecoration: "underline",
+      color: "gray",
+      "& svg": {
+        color: "gray",
+      },
+    },
+  },
+  linkedin: {
+    "&:hover": {
+      textDecoration: "underline",
+      color: "#4dabf5",
       "& svg": {
         color: "#4dabf5",
+      },
+    },
+  },
+  facebook: {
+    "&:hover": {
+      textDecoration: "underline",
+      color: "#4267b2",
+      "& svg": {
+        color: "#4267b2",
       },
     },
   },
@@ -78,7 +99,7 @@ function Footer() {
             href="https://github.com/kennethryandy"
             target="_blank"
             rel="noopener noreferrer"
-            className={classes.socialmediaLinks}
+            className={`${classes.socialmediaLinks} ${classes.github}`}
           >
             <GitHubIcon />
             <Typography variant="subtitle2">Github</Typography>
@@ -89,7 +110,7 @@ function Footer() {
             href="https://www.linkedin.com/in/kennethryan-dy-593709147/"
             target="_blank"
             rel="noopener noreferrer"
-            className={classes.socialmediaLinks}
+            className={`${classes.socialmediaLinks} ${classes.linkedin}`}
           >
             <LinkedInIcon />
             <Typography variant="subtitle2">LinkedIn</Typography>
@@ -100,7 +121,7 @@ function Footer() {
             href="https://www.facebook.com/Slickwit21"
             target="_blank"
             rel="noopener noreferrer"
-            className={classes.socialmediaLinks}
+            className={`${classes.socialmediaLinks} ${classes.facebook}`}
           >
             <FacebookIcon />
             <Typography variant="subtitle2">Facebook</Typography>

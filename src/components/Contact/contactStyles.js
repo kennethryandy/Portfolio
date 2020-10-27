@@ -27,12 +27,17 @@ export default makeStyles((theme) => ({
     },
   },
   textField: {
-    "& fieldset": { borderColor: "#FFF" },
+    "& fieldset": { 
+      borderColor: "#FFF",
+    },
     margin: `${theme.spacing(1)}px 0`,
     "& label": {
       color: "#e0e0e0",
     },
     "& input": {
+      color: "#e0e0e0",
+    },
+    "& textarea": {
       color: "#e0e0e0",
     },
   },

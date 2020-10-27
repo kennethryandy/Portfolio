@@ -113,19 +113,34 @@ function Home({ nav, width, gsap }) {
               </div>
               <div className={classes.icons}>
                 <div className="home-icon-button">
-                  <IconButton color="inherit">
+                  <IconButton 
+                  color="inherit" 
+                  href="https://github.com/kennethryandy"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >
                     <GitHubIcon fontSize={width === "xs" ? "small" : "large"} />
                   </IconButton>
                 </div>
                 <div className="home-icon-button">
-                  <IconButton color="inherit">
+                  <IconButton 
+                  color="inherit"
+                  href="https://www.linkedin.com/in/kennethryan-dy-593709147/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >
                     <LinkedInIcon
                       fontSize={width === "xs" ? "small" : "large"}
                     />
                   </IconButton>
                 </div>
                 <div className="home-icon-button">
-                  <IconButton color="inherit">
+                  <IconButton 
+                  color="inherit"
+                  href="https://www.facebook.com/Slickwit21"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >
                     <FacebookIcon
                       fontSize={width === "xs" ? "small" : "large"}
                     />

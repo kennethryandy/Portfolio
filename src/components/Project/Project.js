@@ -134,8 +134,6 @@ function Project({ gsap }) {
               href="https://github.com/kennethryandy/Covid-19-Tracker"
               target="_blank"
               rel="noopener noreferrer"
-              target="_blank"
-              rel="noopener noreferrer"
               className={classes.code}
             >
               <CodeIcon /> View Code

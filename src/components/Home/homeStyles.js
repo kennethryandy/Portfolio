@@ -112,10 +112,10 @@ export default makeStyles((theme) => ({
       margin: `${theme.spacing(1)}px 0`,
       width: "35%",
     },
-    "& button": {
+    "& a": {
       padding: 0,
       transition: `transform 200ms ${theme.transitions.easing.easeInOut}`,
     },
-    "& button:hover": { transform: "scale(1.2)" },
+    "& a:hover": { transform: "scale(1.2)" },
   },
 }));
