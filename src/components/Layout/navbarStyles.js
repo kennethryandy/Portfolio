@@ -34,6 +34,7 @@ export default makeStyles((theme) => ({
   },
   navIcon: {
     margin: "0",
+    [theme.breakpoints.down("sm")]: { display: "none !important" },
   },
   navlinkScondary: {
     "&:hover": {
