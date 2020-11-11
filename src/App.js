@@ -1,5 +1,5 @@
 import React, { useEffect, useState, lazy, Suspense } from "react";
-import {theme, themeDark} from './config/theme'
+import { theme, themeDark } from "./config/theme";
 import { createMuiTheme, ThemeProvider } from "@material-ui/core/styles";
 import CssBaseline from "@material-ui/core/CssBaseline";
 import gsap from "./gsap";
@@ -29,9 +29,14 @@ function App() {
   return (
     <ThemeProvider theme={darkTheme ? dark : light}>
       <CssBaseline />
-      <Suspense fallback={<Loading/>}>
-        <Navbar navBar={navBar} gsap={gsap} dark={darkTheme} setDark={setDark} />
-        <Home nav={setNavBar} gsap={gsap}/>
+      <Suspense fallback={<Loading />}>
+        <Navbar
+          navBar={navBar}
+          gsap={gsap}
+          dark={darkTheme}
+          setDark={setDark}
+        />
+        <Home nav={setNavBar} gsap={gsap} />
         <About gsap={gsap} />
         <Project gsap={gsap} />
         <Contact gsap={gsap} />

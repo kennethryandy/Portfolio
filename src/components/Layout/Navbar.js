@@ -110,14 +110,23 @@ function Navbar({ navBar, gsap, dark, setDark }) {
             >
               <span className="links">portfolio</span>
             </Link>
-              <span className="links">
-                <IconButton color="inherit" className={classes.navlinkScondary} onClick={() => setDark(!dark)}>
-                  {dark ? 
-                  <span className="links"><LightIcon /></span> 
-                  : <span className="links"><DarkIcon /></span>
-                  }
-                </IconButton>
-              </span>
+            <span className="links">
+              <IconButton
+                color="inherit"
+                className={classes.navlinkScondary}
+                onClick={() => setDark(!dark)}
+              >
+                {dark ? (
+                  <span className="links">
+                    <LightIcon />
+                  </span>
+                ) : (
+                  <span className="links">
+                    <DarkIcon />
+                  </span>
+                )}
+              </IconButton>
+            </span>
           </div>
         </div>
       </Toolbar>

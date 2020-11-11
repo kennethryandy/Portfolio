@@ -1,6 +1,8 @@
 import { makeStyles } from "@material-ui/core/styles";
 import img from "../../assets/laptop8.jpg";
-
+// import { lazy, Suspense } from "react";
+// const img = lazy(() => import("../../assets/laptop8.jpg"));
+// console.log(img);
 export default makeStyles((theme) => ({
   appBarSpacer: theme.mixins.toolbar,
   home: {
@@ -26,7 +28,6 @@ export default makeStyles((theme) => ({
     display: "flex",
     flexDirection: "column",
     justifyContent: "center",
-    borderBottomRightRadius: 4,
     borderLeftRightRadius: 4,
   },
   container: {

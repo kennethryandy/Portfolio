@@ -42,6 +42,6 @@ export default makeStyles((theme) => ({
     transition: `200ms color ${theme.transitions.easing.easeInOut}`,
     margin: "0 15px !important",
     textDecoration: "none ",
-    [theme.breakpoints.up("sm")]: { display: "none" },
+    [theme.breakpoints.up("sm")]: { display: "none !important" },
   },
 }));
