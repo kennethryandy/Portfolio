@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import Typed from "react-typed";
-import VisibilitySensor from "react-visibility-sensor";
 import resume from "../../assets/files/RESUME.pdf";
 //material-ui
 import homeStyles from "./homeStyles";
@@ -59,7 +58,7 @@ function Home ({ width, gsap }) {
 						<div className="content-line">
 							<div className="desc content">
 								<Typed
-									strings={["CREATIVE FULLSTACK WEB DEVELOPER"]}
+									strings={["CREATIVE FRONT-END WEB DEVELOPER"]}
 									typeSpeed={20}
 									showCursor={false}
 									startDelay={900}

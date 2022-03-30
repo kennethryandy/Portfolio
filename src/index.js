@@ -2,6 +2,8 @@ import React from "react";
 // import ReactDOM from "react-dom";
 import { hydrate, render } from "react-dom";
 import "./index.css";
+import 'react-owl-carousel2/lib/styles.css';
+import 'react-owl-carousel2/src/owl.theme.default.css';
 import App from "./App";
 import * as serviceWorker from "./serviceWorker";
 
@@ -14,9 +16,9 @@ import * as serviceWorker from "./serviceWorker";
 
 const rootElement = document.getElementById("root");
 if (rootElement.hasChildNodes()) {
-  hydrate(<App />, rootElement);
+	hydrate(<App />, rootElement);
 } else {
-  render(<App />, rootElement);
+	render(<App />, rootElement);
 }
 
 serviceWorker.register();

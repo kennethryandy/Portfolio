@@ -3,6 +3,9 @@ import zmovies from "../../assets/img/zmovies.png";
 import socialclone from "../../assets/img/socialclone.png";
 import quizgame from "../../assets/img/quizgame.png";
 import lets from '../../assets/img/lets.png';
+import rooche from '../../assets/img/rooche.png';
+import formStep from '../../assets/img/form-step.png';
+import cnMentor from '../../assets/img/cnmentor.png';
 
 const projects = [
 	{
@@ -73,10 +76,49 @@ const works = [
 			"Wordpress",
 			"React",
 			"Bootstrap",
-			"Google API's"
+			"Google API's",
+			"SASS"
 		]
 	},
-
+	{
+		title: "Rooche",
+		img: rooche,
+		desc: "Rooche use only the latest and the best in our mobile app, game and web development projects and in creating responsive web design for better user interface, user experience of your brand. We also integrate the best SEO practices to make it easier for your to rank on search engines. Rooche is an all-in-one IT solutions online!",
+		link: "https://rooche.net/",
+		srcCode: false,
+		tech: [
+			"Wordpress",
+			"Reflex-grid",
+			"Google API's",
+			"SASS"
+		]
+	},
+	{
+		title: "Survey Form Projects",
+		img: formStep,
+		desc: "A hearing aid company that needs multiple desing for their product and service, using HTML, SASS, vanilla javascript our team builds multiple step form to collect the data of the survey form.",
+		link: false,
+		srcCode: false,
+		tech: [
+			"HTML",
+			"Reflex-grid",
+			"SASS",
+			"Vanilla javascript"
+		]
+	},
+	{
+		title: "Business Mentor UK",
+		img: cnMentor,
+		desc: "Christine Nicholson, award-winning Professional Business Mentor, author and speaker.",
+		link: "https://www.businessmentoruk.com",
+		srcCode: false,
+		tech: [
+			"Wordpress",
+			"Reflex-grid",
+			"SASS",
+			"Vanilla javascript"
+		]
+	},
 ];
 
 export {

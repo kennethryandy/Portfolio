@@ -12,10 +12,10 @@
     "gsap": "^3.5.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
+    "react-owl-carousel2": "^0.3.0",
     "react-scripts": "^4.0.0",
     "react-snap": "^1.23.0",
-    "react-typed": "^1.2.0",
-    "react-visibility-sensor": "^5.1.1"
+    "react-typed": "^1.2.0"
   },
   "scripts": {
     "start": "react-scripts start",
