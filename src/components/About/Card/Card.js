@@ -81,13 +81,13 @@ function Card ({ gsap }) {
 						</Typography>
 						<Divider className={classes.hr} variant="middle" />
 						<Typography className={classes.skills} variant="body1">
-							HTML5, CSS/SASS/JSS, Javascript, Jquery, Ajax
+							HTML5, CSS/SASS/JSS/LESS, Javascript, Jquery, Ajax
 						</Typography>
 						<Typography className={classes.title} variant="subtitle2">
 							Frameworks
 						</Typography>
 						<Typography className={classes.skills} variant="body1">
-							REACT, REDUX, VUE
+							REACT/NEXT, REDUX, VUE, LARAVEL
 						</Typography>
 					</Paper>
 				</Grid>
@@ -105,7 +105,7 @@ function Card ({ gsap }) {
 							Database
 						</Typography>
 						<Typography className={classes.skills} variant="body1">
-							MongoDB, Firebase, SQL
+							Google API's, MongoDB, Firebase, SQL
 						</Typography>
 					</Paper>
 				</Grid>
@@ -117,7 +117,7 @@ function Card ({ gsap }) {
 						</Typography>
 						<Divider className={classes.hr} variant="middle" />
 						<Typography className={classes.skills} variant="body1">
-							NPM, PIP, Git/Github, CLI, VS Code,
+							Wordpress, NPM, PIP, Git/Github, CLI, VS Code,
 						</Typography>
 						<Typography className={classes.title} variant="subtitle2">
 							Design

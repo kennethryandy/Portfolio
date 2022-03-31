@@ -27,11 +27,11 @@ function About ({ gsap }) {
 			{/* <div className={classes.appBarSpacer} /> */}
 			<div className={classes.info}>
 				<div className="info">
-					<Typography variant="h4">About Me</Typography>
+					<Typography variant="h4">About me</Typography>
 				</div>
 				<div className="info">
 					<Typography gutterBottom variant="body1" className={classes.aboutMe}>
-						"Hello, my name is Kenneth Ryan Dy a web developer. As I enjoy
+						"Hello, my name is Kenneth Ryan Dy a web developer with a 1 year+ experience in the field. As I enjoy
 						exploring new things I never back down from any challenges that
 						comes. Seeking ideas and concepts are my favorite part of being a
 						developer. I constantly learning to shrapen my skills that I already

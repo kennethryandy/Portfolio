@@ -16,7 +16,11 @@ export default makeStyles((theme) => ({
 		[theme.breakpoints.between("md", "lg")]: { width: "75%" },
 		[theme.breakpoints.between("xs", "sm")]: { width: "85%" },
 		width: "70%",
-		"& h4": { textAlign: "center", margin: theme.spacing(2) },
+		"& h4": {
+			textAlign: "center",
+			margin: theme.spacing(2),
+			fontWeight: 600,
+		},
 		"& p": { textAlign: "justify", fontSize: "1.2rem" },
 		display: "flex",
 		flexDirection: "column",

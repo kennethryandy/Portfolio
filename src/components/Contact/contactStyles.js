@@ -10,6 +10,7 @@ export default makeStyles((theme) => ({
 	},
 	title: {
 		textAlign: "center",
+		fontWeight: 600
 	},
 	formContainer: {
 		display: "flex",

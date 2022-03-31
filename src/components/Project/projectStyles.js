@@ -4,22 +4,31 @@ import {
 
 export default makeStyles((theme) => ({
 	appBarSpacer: theme.mixins.toolbar,
+	projectContainer: {
+		position: "relative"
+	},
+	title: {
+		marginTop: theme.spacing(2),
+		marginBottom: theme.spacing(2),
+		fontWeight: 600,
+	},
 	project: {
 		height: "100%",
 		width: "90%",
 		margin: "auto",
+		marginBottom: "60px"
 	},
 	projectItem: {
 		display: "flex",
 		alignItems: "center",
 		justifyContent: "center",
-		margin: "5rem auto",
-		padding: theme.spacing(3),
+		margin: `${theme.spacing(2)}px auto`,
+		padding: `${theme.spacing(3)}px ${theme.spacing(5)}px`,
 		overflow: "hidden",
 		cursor: "grab",
-		[theme.breakpoints.down("md")]: {
-			margin: "3rem auto"
-		},
+		[theme.breakpoints.only("md")]: {
+			padding: theme.spacing(3)
+		}
 	},
 	imgContainer: {
 		flex: 1.3,
@@ -103,6 +112,32 @@ export default makeStyles((theme) => ({
 			fontSize: 12
 		},
 	},
+	navIcons: {
+		display: "flex",
+		justifyContent: "space-between",
+		alignItems: "center",
+		position: "absolute",
+		width: "100%",
+		top: "50%",
+		left: "50%",
+		transform: "translate(-50%, -50%)",
+		zIndex: 100,
+	},
+	navIconBtn: {
+		borderRadius: "50%"
+	},
+	navIcon: {
+		cursor: "pointer",
+		borderRadius: "50%",
+		width: "2em",
+		height: "2em",
+		padding: theme.spacing(1),
+		transition: theme.transitions.easing.easeInOut,
+		color: "#869791",
+		"&:hover": {
+			// color: "#D6D6D6"
+		}
+	},
 	hr: {
 		backgroundColor: "#14213d",
 		width: 360,
@@ -128,4 +163,7 @@ export default makeStyles((theme) => ({
 		height: 24,
 		overflow: "hidden",
 	},
+	listItemContainer: {
+		pointerEvents: "none"
+	}
 }));
