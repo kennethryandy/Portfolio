@@ -3,6 +3,8 @@ import { theme, themeDark } from "./config/theme";
 import { createMuiTheme, ThemeProvider } from "@material-ui/core/styles";
 import CssBaseline from "@material-ui/core/CssBaseline";
 import gsap from "./gsap";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 import Loading from "./components/Layout/Loading";
 const Navbar = lazy(() => import("./components/Layout/Navbar"));
 const Home = lazy(() => import("./components/Home/Home"));
@@ -17,6 +19,8 @@ function App () {
 	const dark = createMuiTheme(themeDark);
 
 	useEffect(() => {
+		AOS.init();
+		AOS.refresh();
 		gsap.to(document.body, { duration: 0, css: { visibility: "visible" } });
 	}, []);
 
