@@ -46,7 +46,7 @@ function Home ({ width, gsap }) {
 				<div className={classes.introduction}>
 					<Typography variant="body1">
 						<div className="content-line">
-							<div className="intro content">Hello, I'm</div>
+							<p className="intro content">Hello, I'm</p>
 						</div>
 					</Typography>
 					<Typography className={classes.name} variant="h1">

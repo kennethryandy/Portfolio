@@ -8,6 +8,7 @@ import ArrowForwardIosOutlinedIcon from '@material-ui/icons/ArrowForwardIosOutli
 import ArrowBackIosOutlined from "@material-ui/icons/ArrowBackIosOutlined";
 import projectStyles from "./projectStyles";
 import CodeIcon from "@material-ui/icons/Code";
+import VisibilityOffIcon from "@material-ui/icons/VisibilityOff";
 
 function Project ({ gsap }) {
 	const classes = projectStyles();
@@ -17,11 +18,11 @@ function Project ({ gsap }) {
 	const options = {
 		items: 1,
 		rewind: true,
-		nav: true,
-		autoplay: true,
+		// autoplay: true,
 		loop: true,
 		smartSpeed: 1400,
-		autoplayTimeout: 6000
+		margin: 80,
+		// autoplayTimeout: 6000
 	};
 
 	useEffect(() => {
@@ -39,7 +40,7 @@ function Project ({ gsap }) {
 			<div className={classes.projectContainer}>
 				<OwlCarousel ref={worksRef} options={options}>
 					{works.map((work, i) => (
-						<Paper className={classes.projectItem} elevation={2}>
+						<Paper key={i} className={classes.projectItem} elevation={2}>
 							{i % 2 === 0 ? (
 								<>
 									<div className={classes.imgContainer}>
@@ -69,7 +70,7 @@ function Project ({ gsap }) {
 											</div>
 											<ul>
 												{work.tech.map(tech => (
-													<div className={classes.listItem}>
+													<div key={tech} className={classes.listItem}>
 														<li className="lists1">{tech}</li>
 													</div>
 												))}
@@ -77,12 +78,14 @@ function Project ({ gsap }) {
 										</div>
 										<div className={classes.projectButtons}>
 											<Button
-												href={work.link}
+												href={work.link ? work.link : ""}
+												startIcon={work.link ? <></> : <VisibilityOffIcon />}
 												color="primary"
 												variant="contained"
 												target="_blank"
 												rel="noopener noreferrer"
 												className={classes.demo}
+												disabled={!work.link}
 											>
 												Live Demo
 											</Button>
@@ -114,7 +117,7 @@ function Project ({ gsap }) {
 											</div>
 											<ul>
 												{work.tech.map(tech => (
-													<div className={classes.listItem}>
+													<div key={tech} className={classes.listItem}>
 														<li className="lists1">{tech}</li>
 													</div>
 												))}
@@ -171,7 +174,7 @@ function Project ({ gsap }) {
 			<div className={classes.projectContainer}>
 				<OwlCarousel ref={projectsRef} options={options}>
 					{projects.map((project, i) => (
-						<Paper className={classes.projectItem} elevation={2}>
+						<Paper key={i} className={classes.projectItem} elevation={2}>
 							{i % 2 === 0 ? (
 								<>
 									<div className={classes.projectInfo}>
@@ -189,7 +192,7 @@ function Project ({ gsap }) {
 											</div>
 											<ul className={classes.listItemContainer}>
 												{project.tech.map(tech => (
-													<div className={classes.listItem}>
+													<div key={tech} className={classes.listItem}>
 														<li className="lists2">{tech}</li>
 													</div>
 												))}
@@ -258,7 +261,7 @@ function Project ({ gsap }) {
 											</div>
 											<ul>
 												{project.tech.map(tech => (
-													<div className={classes.listItem}>
+													<div key={tech} className={classes.listItem}>
 														<li className="lists2">{tech}</li>
 													</div>
 												))}

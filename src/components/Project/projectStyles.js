@@ -91,6 +91,7 @@ export default makeStyles((theme) => ({
 	},
 	projectButtons: {
 		display: "flex",
+		zIndex: 101
 	},
 	code: {
 		"&:hover": {

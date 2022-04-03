@@ -60,7 +60,7 @@ export default makeStyles((theme) => ({
 			"& .intro": {
 				position: "absolute",
 				bottom: -6,
-				[theme.breakpoints.only("xs")]: { bottom: 0 },
+				lineHeight: 0
 			},
 		},
 	},
@@ -75,6 +75,7 @@ export default makeStyles((theme) => ({
 		[theme.breakpoints.down("md")]: { fontSize: "2.5rem !important" },
 		[theme.breakpoints.only("xs")]: {
 			fontSize: "1.6rem !important",
+			lineHeight: "2.5rem"
 		},
 		textShadow:
 			"0px 2px 1px rgba(0,0,0,0.2), 0px 1px 1px rgba(0,0,0,0.14), 0px 1px 3px rgba(0,0,0,0.12);",
