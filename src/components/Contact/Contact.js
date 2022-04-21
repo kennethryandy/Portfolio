@@ -1,16 +1,27 @@
-import React, { useState } from "react";
+import React, { useState, forwardRef } from "react";
 import emailjs from 'emailjs-com';
 //material-ui
 import { Typography, TextField, Button } from "@material-ui/core";
+import Dialog from "@material-ui/core/Dialog";
+import DialogTitle from "@material-ui/core/DialogTitle";
+import DialogContent from "@material-ui/core/DialogContent";
+import DialogContentText from "@material-ui/core/DialogContentText";
+import Slide from "@material-ui/core/Slide";
 import SendIcon from "@material-ui/icons/Send";
+import CloseIcon from "@material-ui/icons/Close"
 import contactStyles from "./contactStyles";
 import Footer from "./Footer/Footer";
 
+const Transition = forwardRef(function Transition (props, ref) {
+	return <Slide direction="up" ref={ref} {...props} />;
+});
+
 function Contact () {
 	const classes = contactStyles();
-	const [showMsg, setShowMsg] = useState(false)
-	const [loading, setLoading] = useState(false)
+	const [loading, setLoading] = useState(false);
+	const [openDia, setOpenDia] = useState(false);
 
+	const handleCloseDia = () => setOpenDia(false);
 
 	const handleSubmit = e => {
 		e.preventDefault()
@@ -18,14 +29,12 @@ function Contact () {
 		emailjs.sendForm('service_8uy6oii', 'template_c3kuanm', e.target, 'user_lwR1O0HcFGB2BCnsNBfVw')
 			.then((result) => {
 				if (result.text === 'OK') {
-					setShowMsg(true)
-					setTimeout(() => {
-						setShowMsg(false)
-					}, 5000)
+					setOpenDia(true);
 					setLoading(false)
 				}
 			}, (error) => {
-				console.log(error.text);
+				setOpenDia(true);
+				// console.log(error.text);
 				setLoading(false)
 			});
 		e.target.reset()
@@ -90,9 +99,14 @@ function Contact () {
 						</div>
 					</form>
 				</div>
-				{showMsg && <Typography gutterBottom align="center" className={classes.msg}>Thank you for your email. I will get back to you shortly!</Typography>}
 			</div>
 			<Footer />
+			<Dialog open={openDia} TransitionComponent={Transition} keepMounted onClose={handleCloseDia} aria-describedby="thank-you-message">
+				<DialogTitle className={classes.dialogTitle} id="thank-you-message"><span>Thank you!</span><CloseIcon onClick={handleCloseDia} /></DialogTitle>
+				<DialogContent>
+					<DialogContentText>Your message has been successfully sent. We will contact you very soon!</DialogContentText>
+				</DialogContent>
+			</Dialog>
 		</>
 	);
 }

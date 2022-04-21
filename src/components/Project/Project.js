@@ -18,11 +18,14 @@ function Project ({ gsap }) {
 	const options = {
 		items: 1,
 		rewind: true,
-		// autoplay: true,
+		autoplay: true,
+		mouseDrag: false,
+		touchDrag: false,
 		loop: true,
+		autoplayHoverPause: true,
 		smartSpeed: 1400,
 		margin: 80,
-		// autoplayTimeout: 6000
+		autoplayTimeout: 3200,
 	};
 
 	useEffect(() => {
@@ -104,10 +107,10 @@ function Project ({ gsap }) {
 								<>
 									<div className={classes.projectInfo}>
 										<div className={classes.infoText}>
-											<Typography className="project-title2" variant="h5" gutterBottom>
+											<Typography className="project-title1" variant="h5" gutterBottom>
 												{work.title}
 											</Typography>
-											<Typography variant="body1" className="project-body2" gutterBottom>
+											<Typography variant="body1" className="project-body1" gutterBottom>
 												{work.desc}
 											</Typography>
 											<div className={classes.listItem}>
@@ -172,7 +175,7 @@ function Project ({ gsap }) {
 			</Typography>
 			<Divider className={classes.hr} />
 			<div className={classes.projectContainer}>
-				<OwlCarousel ref={projectsRef} options={options}>
+				<OwlCarousel ref={projectsRef} options={{ ...options, autoplayTimeout: 3800 }}>
 					{projects.map((project, i) => (
 						<Paper key={i} className={classes.projectItem} elevation={2}>
 							{i % 2 === 0 ? (
@@ -186,7 +189,7 @@ function Project ({ gsap }) {
 												{project.desc}
 											</Typography>
 											<div className={classes.listItem}>
-												<Typography className="lists1" variant="subtitle2">
+												<Typography className="lists2" variant="subtitle2">
 													Built with
 												</Typography>
 											</div>
@@ -224,7 +227,7 @@ function Project ({ gsap }) {
 											href={project.link}
 											target="_blank"
 											rel="noopener noreferrer"
-											className="link1"
+											className="link2"
 										>
 											<div data-aos="fade-left" aos-duration="900">
 												<img src={project.img} loading="lazy" alt={project.title ? project.title : ""} />
@@ -239,7 +242,7 @@ function Project ({ gsap }) {
 											href={project.link}
 											target="_blank"
 											rel="noopener noreferrer"
-											className="link1"
+											className="link2"
 										>
 											<div data-aos="fade-right" aos-duration="900">
 												<img src={project.img} loading="lazy" alt={project.title ? project.title : ""} />

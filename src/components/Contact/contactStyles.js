@@ -50,4 +50,15 @@ export default makeStyles((theme) => ({
 			}
 		}
 	},
+	dialogTitle: {
+		"& h2": {
+			display: "flex",
+			alignItems: "center",
+			justifyContent: "space-between",
+			width: "100%",
+			"& svg": {
+				cursor: "pointer"
+			}
+		}
+	}
 }));

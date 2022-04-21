@@ -98,7 +98,7 @@ const works = [
 		img: formStep,
 		desc: "A hearing aid company that needs multiple desing for their product and service, using HTML, SASS, vanilla javascript our team builds multiple step form to collect the data of the survey form.",
 		link: false,
-		srcCode: false,
+		srcCode: "https://github.com/kennethryandy/form-step-projects",
 		tech: [
 			"HTML",
 			"Reflex-grid",
@@ -109,7 +109,7 @@ const works = [
 	{
 		title: "Business Mentor UK",
 		img: cnMentor,
-		desc: "Christine Nicholson, award-winning Professional Business Mentor, author and speaker.",
+		desc: "A website built for Christine Nicholson an award-winning Professional Business Mentor, author and speaker.",
 		link: "https://www.businessmentoruk.com",
 		srcCode: false,
 		tech: [

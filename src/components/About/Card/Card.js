@@ -73,7 +73,7 @@ function Card ({ gsap }) {
 				Skills & Tools
 			</Typography>
 			<Grid container className={classes.container}>
-				<Grid md={4} sm={6} xs={6} item className={classes.item}>
+				<Grid md={4} sm={6} xs={12} item className={classes.item}>
 					<Paper className={`${classes.paper} box`}>
 						<i className="fas fa-laptop-code" />
 						<Typography className={classes.title} variant="h6">
@@ -91,7 +91,7 @@ function Card ({ gsap }) {
 						</Typography>
 					</Paper>
 				</Grid>
-				<Grid md={4} sm={6} xs={6} item className={classes.item}>
+				<Grid md={4} sm={6} xs={12} item className={classes.item}>
 					<Paper className={`${classes.paper} box`}>
 						<i className="fas fa-database" />
 						<Typography className={classes.title} variant="h6">
@@ -99,13 +99,13 @@ function Card ({ gsap }) {
 						</Typography>
 						<Divider className={classes.hr} variant="middle" />
 						<Typography className={classes.skills} variant="body1">
-							PHP, NodeJs, Express, Graphql, REST, Python, Java
+							PHP, NodeJs, Express, Graphql, REST, Java, Google API's
 						</Typography>
 						<Typography className={classes.title} variant="subtitle2">
 							Database
 						</Typography>
 						<Typography className={classes.skills} variant="body1">
-							Google API's, MongoDB, Firebase, SQL
+							MongoDB, Firebase, SQL
 						</Typography>
 					</Paper>
 				</Grid>

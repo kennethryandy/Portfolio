@@ -25,7 +25,6 @@ export default makeStyles((theme) => ({
 		margin: `${theme.spacing(2)}px auto`,
 		padding: `${theme.spacing(3)}px ${theme.spacing(5)}px`,
 		overflow: "hidden",
-		cursor: "grab",
 		[theme.breakpoints.only("md")]: {
 			padding: theme.spacing(3)
 		}
