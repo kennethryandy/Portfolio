@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Typed from "react-typed";
-import resume from "../../assets/files/RESUME.pdf";
+import resume from "../../assets/files/REVISED_RESUME.pdf";
 //material-ui
 import homeStyles from "./homeStyles";
 import { Button, IconButton, Typography } from "@material-ui/core";
