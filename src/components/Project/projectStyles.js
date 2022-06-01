@@ -95,7 +95,10 @@ export default makeStyles((theme) => ({
 	code: {
 		"&:hover": {
 			color: "#0276aa",
+			textDecoration: "underline",
+			background: "none !important"
 		},
+		border: "none !important",
 		color: "#03a9f4",
 		display: "flex",
 		alignItems: "center",

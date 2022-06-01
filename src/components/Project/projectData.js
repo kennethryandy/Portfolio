@@ -55,8 +55,8 @@ const projects = [
 		title: "Quiz Game",
 		img: quizgame,
 		desc: "A trivia game that lets the user select a category and difficulties that is pulled through the open trivia API. It then randomly selects ten random questions depending on the category that user's choose and tracks the correct answers.",
-		link: "https://quiz-clone.netlify.app",
-		srcCode: "https://github.com/kennethryandy/QuizGame",
+		link: "https://quiz-game-v2.netlify.app/",
+		srcCode: "https://github.com/kennethryandy/quizgame-v2",
 		tech: [
 			"React",
 			"Material-UI",

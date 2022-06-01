@@ -18,14 +18,14 @@ function Project ({ gsap }) {
 	const options = {
 		items: 1,
 		rewind: true,
-		autoplay: true,
+		// autoplay: true,
 		mouseDrag: false,
 		touchDrag: false,
 		loop: true,
 		autoplayHoverPause: true,
 		smartSpeed: 1400,
 		margin: 80,
-		autoplayTimeout: 3200,
+		// autoplayTimeout: 3200,
 	};
 
 	useEffect(() => {
@@ -92,14 +92,17 @@ function Project ({ gsap }) {
 											>
 												Live Demo
 											</Button>
-											<Link
-												href={work.srcCode}
+											<Button
+												href={work.srcCode ? work.srcCode : ""}
+												startIcon={<CodeIcon />}
+												variant="outlined"
 												target="_blank"
 												rel="noopener noreferrer"
 												className={classes.code}
+												disabled={!work.srcCode}
 											>
-												<CodeIcon /> View Code
-											</Link>
+												View Code
+											</Button>
 										</div>
 									</div>
 								</>
@@ -137,14 +140,25 @@ function Project ({ gsap }) {
 											>
 												Live Demo
 											</Button>
-											<Link
+											<Button
+												href={work.srcCode ? work.srcCode : ""}
+												startIcon={<CodeIcon />}
+												variant="outlined"
+												target="_blank"
+												rel="noopener noreferrer"
+												className={classes.code}
+												disabled={!work.srcCode}
+											>
+												View Code
+											</Button>
+											{/* <Link
 												href={work.srcCode}
 												target="_blank"
 												rel="noopener noreferrer"
 												className={classes.code}
 											>
 												<CodeIcon /> View Code
-											</Link>
+											</Link> */}
 										</div>
 									</div>
 									<div className={classes.imgContainer}>
